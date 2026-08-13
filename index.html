@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zug Bike Commute & Rental Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <!-- Loading overlay -->
+  <div id="loading" class="loading-indicator">
+    <div class="spinner"></div>
+    <span>Loading...</span>
+  </div>
+
+  <!-- Control panel (top-right) -->
+  <div class="control-panel">
+    <h3>Zug Commute Planner</h3>
+
+    <div class="control-section">
+      <h4>Layers</h4>
+      <label><input type="checkbox" id="toggle-municipalities" checked> Municipality boundaries</label>
+      <label><input type="checkbox" id="toggle-cycling"> Cycling network</label>
+    </div>
+
+    <div class="control-section">
+      <h4>Filters</h4>
+      <div class="slider-group">
+        <label for="maxRent">Maximum rent</label>
+        <input type="range" id="maxRent" min="800" max="2800" step="50" value="2800">
+        <div class="slider-value" id="maxRent-value">CHF 2,800</div>
+      </div>
+      <div class="slider-group">
+        <label for="maxTime">Maximum cycling time</label>
+        <input type="range" id="maxTime" min="5" max="90" step="5" value="90">
+        <div class="slider-value" id="maxTime-value">90 min</div>
+      </div>
+    </div>
+
+    <div class="control-section">
+      <h4>Route profile</h4>
+      <div class="profile-selector">
+        <select id="route-profile">
+          <option value="safety">Quiet roads (default)</option>
+          <option value="trekking">Balanced</option>
+          <option value="fastbike">Fastest</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="control-section">
+      <h4>How to use</h4>
+      <p style="font-size: 12px; color: #6b7280; line-height: 1.5;">
+        Click anywhere on the map to calculate a cycling route to the office.
+        Click a municipality for rent and commute details.
+        Drag the marker to try different start points.
+      </p>
+    </div>
+  </div>
+
+  <!-- Rent legend (bottom-left) -->
+  <div class="legend">
+    <h4>Monthly rent (2-room flat)</h4>
+    <div class="legend-scale" id="legend-scale"></div>
+    <div class="legend-labels">
+      <span>CHF 1,000</span>
+      <span>CHF 1,700</span>
+      <span>CHF 2,400</span>
+    </div>
+  </div>
+
+  <!-- Route info panel (bottom-right) -->
+  <div class="route-panel" id="route-panel">
+    <h3>
+      Route details
+      <button class="close-btn" id="close-route-panel">&times;</button>
+    </h3>
+
+    <div class="route-stats">
+      <div class="route-stat">
+        <div class="stat-label">Distance</div>
+        <div class="stat-value"><span id="route-distance">—</span> <span class="stat-unit">km</span></div>
+      </div>
+      <div class="route-stat">
+        <div class="stat-label">Time</div>
+        <div class="stat-value"><span id="route-time">—</span> <span class="stat-unit">min</span></div>
+      </div>
+      <div class="route-stat">
+        <div class="stat-label">Elevation gain</div>
+        <div class="stat-value"><span id="route-elev-gain">—</span> <span class="stat-unit">m</span></div>
+      </div>
+      <div class="route-stat">
+        <div class="stat-label">Elevation loss</div>
+        <div class="stat-value"><span id="route-elev-loss">—</span> <span class="stat-unit">m</span></div>
+      </div>
+      <div class="route-stat">
+        <div class="stat-label">Max elevation</div>
+        <div class="stat-value"><span id="route-max-elev">—</span> <span class="stat-unit">m</span></div>
+      </div>
+      <div class="route-stat">
+        <div class="stat-label">Winter</div>
+        <div class="stat-value"><span id="route-winter" class="winter-badge">—</span></div>
+      </div>
+    </div>
+
+    <div class="route-meta" id="route-meta"></div>
+
+    <div class="alt-routes">
+      <label><input type="checkbox" id="toggle-alt1" checked> <span id="alt1-label">Alternative 1</span></label>
+      <label><input type="checkbox" id="toggle-alt2" checked> <span id="alt2-label">Alternative 2</span></label>
+    </div>
+
+    <div>
+      <span style="font-size: 12px; color: #6b7280;">Profile: </span>
+      <span style="font-size: 12px; font-weight: 600;" id="route-profile-name">Quiet roads</span>
+    </div>
+
+    <div class="elevation-chart" id="elevation-chart"></div>
+
+    <button class="export-btn" id="export-gpx">&#128190; Export GPX</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/routing.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    // Render legend gradient
+    const legendScale = document.getElementById("legend-scale");
+    const steps = 20;
+    for (let i = 0; i < steps; i++) {
+      const t = i / (steps - 1);
+      const rent = 1000 + t * 1400;
+      const div = document.createElement("div");
+      div.style.flex = "1";
+      div.style.background = getRentColour(rent);
+      legendScale.appendChild(div);
+    }
+  </script>
+
+</body>
+</html>

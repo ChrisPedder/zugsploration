@@ -1,0 +1,90 @@
+/**
+ * Main application — wires up UI controls and initialises layers.
+ */
+
+document.addEventListener("DOMContentLoaded", async () => {
+  initMap();
+  await loadRentalData();
+  loadMunicipalities();
+  loadCyclingNetwork();
+  setupControls();
+});
+
+function setupControls() {
+  // Layer toggles
+  document.getElementById("toggle-municipalities").addEventListener("change", (e) => {
+    if (!municipalityLayer) return;
+    e.target.checked ? map.addLayer(municipalityLayer) : map.removeLayer(municipalityLayer);
+  });
+
+  document.getElementById("toggle-cycling").addEventListener("change", (e) => {
+    if (!cyclingNetworkLayer) return;
+    e.target.checked ? map.addLayer(cyclingNetworkLayer) : map.removeLayer(cyclingNetworkLayer);
+  });
+
+  // Filter sliders
+  const maxRentSlider = document.getElementById("maxRent");
+  const maxRentLabel = document.getElementById("maxRent-value");
+  maxRentSlider.addEventListener("input", () => {
+    maxRentLabel.textContent = `CHF ${parseInt(maxRentSlider.value).toLocaleString()}`;
+    refreshMunicipalityStyles();
+  });
+
+  const maxTimeSlider = document.getElementById("maxTime");
+  const maxTimeLabel = document.getElementById("maxTime-value");
+  maxTimeSlider.addEventListener("input", () => {
+    maxTimeLabel.textContent = `${maxTimeSlider.value} min`;
+    refreshMunicipalityStyles();
+  });
+
+  // Route profile selector
+  document.getElementById("route-profile").addEventListener("change", (e) => {
+    currentProfile = e.target.value;
+    if (startMarker) {
+      const pos = startMarker.getLatLng();
+      fetchAndDisplayRoutes(pos.lat, pos.lng);
+    }
+  });
+
+  // Alt route toggles
+  document.getElementById("toggle-alt1").addEventListener("change", (e) => {
+    if (routeLayers.alt1) {
+      e.target.checked ? map.addLayer(routeLayers.alt1) : map.removeLayer(routeLayers.alt1);
+    }
+  });
+
+  document.getElementById("toggle-alt2").addEventListener("change", (e) => {
+    if (routeLayers.alt2) {
+      e.target.checked ? map.addLayer(routeLayers.alt2) : map.removeLayer(routeLayers.alt2);
+    }
+  });
+
+  // Close route panel
+  document.getElementById("close-route-panel").addEventListener("click", () => {
+    document.getElementById("route-panel").classList.remove("active");
+    clearRoutes();
+    if (startMarker) {
+      map.removeLayer(startMarker);
+      startMarker = null;
+    }
+  });
+
+  // Export GPX
+  document.getElementById("export-gpx").addEventListener("click", () => {
+    if (!startMarker) return;
+    const pos = startMarker.getLatLng();
+    exportGpx(pos.lat, pos.lng, currentProfile).catch(err => {
+      alert("GPX export failed: " + err.message);
+    });
+  });
+}
+
+function refreshMunicipalityStyles() {
+  if (municipalityLayer && municipalityLayer.eachLayer) {
+    municipalityLayer.eachLayer(layer => {
+      if (layer.feature) {
+        layer.setStyle(featureMunicipalityStyle(layer.feature));
+      }
+    });
+  }
+}
