@@ -193,7 +193,7 @@ export class ZugsplorationStack extends cdk.Stack {
       ],
       destinationBucket: siteBucket,
       distribution,
-      distributionPaths: ["/index.html", "/"],
+      distributionPaths: ["/*"],
     });
 
     // --- Update Cognito callback URLs with CloudFront domain ---
