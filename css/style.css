@@ -71,6 +71,44 @@ body {
   margin-bottom: 8px;
 }
 
+/* --- Scrape button --- */
+.scrape-btn {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 5px 10px;
+  background: #059669;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.scrape-btn:hover {
+  background: #047857;
+}
+
+.scrape-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.scrape-status {
+  font-size: 11px;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.scrape-status.success {
+  color: #059669;
+}
+
+.scrape-status.error {
+  color: #dc2626;
+}
+
 /* --- Filter Sliders --- */
 .slider-group {
   margin-bottom: 10px;
@@ -342,6 +380,23 @@ body {
 
 .popup-route-btn:hover {
   background: #1d4ed8;
+}
+
+.popup-link-btn {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: #059669;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popup-link-btn:hover {
+  background: #047857;
 }
 
 /* --- Greyed out municipalities --- */

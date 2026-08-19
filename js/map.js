@@ -5,6 +5,7 @@
 let map;
 let municipalityLayer;
 let cyclingNetworkLayer;
+let flatfoxLayer = null;
 let routeLayers = { primary: null, alt1: null, alt2: null };
 let startMarker = null;
 let officeMarker = null;
@@ -41,6 +42,9 @@ function initMap() {
     iconAnchor: [16, 32],
     popupAnchor: [0, -34],
   });
+
+  map.createPane("flatfoxPane");
+  map.getPane("flatfoxPane").style.zIndex = 450;
 
   officeMarker = L.marker([OFFICE.lat, OFFICE.lon], { icon: officeIcon })
     .addTo(map)
@@ -449,6 +453,78 @@ function highlightRoutePoint(lat, lon, elev, dist) {
       .addTo(map)
       .bindTooltip(`${Math.round(elev)}m at ${dist.toFixed(1)}km`, { permanent: true, direction: "top" });
   }
+}
+
+/* --- Flatfox listings layer --- */
+
+function renderFlatfoxListings() {
+  if (flatfoxLayer) map.removeLayer(flatfoxLayer);
+  if (!flatfoxListings || flatfoxListings.length === 0) return;
+
+  const maxRent = getFilterValue("maxRent");
+  const group = L.layerGroup();
+
+  for (const listing of flatfoxListings) {
+    if (listing.price === null) continue;
+    if (listing.price > maxRent) continue;
+
+    const colour = getRentColour(listing.price);
+
+    const marker = L.circleMarker([listing.lat, listing.lon], {
+      radius: 7,
+      color: "#fff",
+      weight: 1.5,
+      fillColor: colour,
+      fillOpacity: 0.85,
+      pane: "flatfoxPane",
+    });
+
+    marker.on("click", function (e) {
+      L.DomEvent.stopPropagation(e);
+      const content = buildListingPopup(listing);
+      L.popup().setLatLng([listing.lat, listing.lon]).setContent(content).openOn(map);
+    });
+
+    marker.bindTooltip(`CHF ${listing.price.toLocaleString()}/mo`, {
+      direction: "top",
+      offset: [0, -6],
+    });
+
+    marker.addTo(group);
+  }
+
+  flatfoxLayer = group;
+  if (document.getElementById("toggle-flatfox").checked) {
+    flatfoxLayer.addTo(map);
+  }
+}
+
+function buildListingPopup(listing) {
+  let html = `<h3>CHF ${listing.price.toLocaleString()}/month</h3>`;
+  html += `<dl class="popup-stats">`;
+
+  const municipality = findNearestMunicipality(listing.lat, listing.lon);
+  if (municipality) {
+    html += `<dt>Area</dt><dd>${municipality}</dd>`;
+  }
+
+  const dist = estimateCyclingDistance(listing.lat, listing.lon);
+  const centre = municipality ? MUNICIPALITY_CENTRES[municipality] : null;
+  const elevGain = centre ? Math.abs((centre.elevation || 425) - 425) : 0;
+  const time = estimateCyclingTime(dist, elevGain);
+  html += `<dt>Cycling distance (est.)</dt><dd>${dist} km</dd>`;
+  html += `<dt>Cycling time (est.)</dt><dd>${time} min</dd>`;
+
+  html += `</dl>`;
+  html += `<a href="${listing.url}" target="_blank" rel="noopener" class="popup-link-btn">View on Flatfox</a> `;
+  html += `<button class="popup-route-btn" onclick="routeFromPoint(${listing.lat}, ${listing.lon})">Route to office</button>`;
+
+  return html;
+}
+
+function refreshFlatfoxListings() {
+  if (flatfoxLayer) map.removeLayer(flatfoxLayer);
+  renderFlatfoxListings();
 }
 
 /* --- Helpers --- */

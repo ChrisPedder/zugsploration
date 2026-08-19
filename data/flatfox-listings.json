@@ -1,0 +1,1613 @@
+{
+  "fetchedAt": "2026-08-19T20:28:02.294805+00:00",
+  "source": "Flatfox public API (pin endpoint)",
+  "bbox": {
+    "north": 47.3,
+    "south": 47.0,
+    "east": 8.7,
+    "west": 8.25
+  },
+  "count": 200,
+  "listings": [
+    {
+      "id": 86288116,
+      "lat": 47.266053,
+      "lon": 8.2656972,
+      "url": "https://flatfox.ch/86288116/",
+      "price": 2350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86288101,
+      "lat": 47.2226162,
+      "lon": 8.6676716,
+      "url": "https://flatfox.ch/86288101/",
+      "price": 2510,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86288084,
+      "lat": 47.2244561,
+      "lon": 8.2674992,
+      "url": "https://flatfox.ch/86288084/",
+      "price": 1350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86288075,
+      "lat": 47.0420469,
+      "lon": 8.3162802,
+      "url": "https://flatfox.ch/86288075/",
+      "price": 2860,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86288074,
+      "lat": 47.0420469,
+      "lon": 8.3162802,
+      "url": "https://flatfox.ch/86288074/",
+      "price": 2860,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86288063,
+      "lat": 47.29128697820982,
+      "lon": 8.560225802223968,
+      "url": "https://flatfox.ch/86288063/",
+      "price": 2360,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86168356,
+      "lat": 47.0441779,
+      "lon": 8.3078646,
+      "url": "https://flatfox.ch/86168356/",
+      "price": 2000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86287893,
+      "lat": 47.2170031,
+      "lon": 8.265513,
+      "url": "https://flatfox.ch/86287893/",
+      "price": 1780,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86208600,
+      "lat": 47.0858303,
+      "lon": 8.2921581,
+      "url": "https://flatfox.ch/86208600/",
+      "price": 2790,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86287872,
+      "lat": 47.1130851,
+      "lon": 8.3886004,
+      "url": "https://flatfox.ch/86287872/",
+      "price": 1550,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86287766,
+      "lat": 47.04162179999999,
+      "lon": 8.3154369,
+      "url": "https://flatfox.ch/86287766/",
+      "price": 1850,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86287677,
+      "lat": 47.0722786,
+      "lon": 8.27963,
+      "url": "https://flatfox.ch/86287677/",
+      "price": 2095,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86287655,
+      "lat": 47.0759682,
+      "lon": 8.2898437,
+      "url": "https://flatfox.ch/86287655/",
+      "price": 1550,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86270471,
+      "lat": 47.0607698,
+      "lon": 8.308394999999999,
+      "url": "https://flatfox.ch/86270471/",
+      "price": 2000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86287174,
+      "lat": 47.01950910000001,
+      "lon": 8.307120099999999,
+      "url": "https://flatfox.ch/86287174/",
+      "price": 1820,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86286459,
+      "lat": 47.29131483401791,
+      "lon": 8.560206394203126,
+      "url": "https://flatfox.ch/86286459/",
+      "price": 1950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86286455,
+      "lat": 47.1925624,
+      "lon": 8.4539806,
+      "url": "https://flatfox.ch/86286455/",
+      "price": 4650,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86286266,
+      "lat": 47.299250377477485,
+      "lon": 8.453420286200895,
+      "url": "https://flatfox.ch/86286266/",
+      "price": 1400,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86286179,
+      "lat": 47.2527681,
+      "lon": 8.6178615,
+      "url": "https://flatfox.ch/86286179/",
+      "price": 3996,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86285007,
+      "lat": 47.0321355,
+      "lon": 8.2548548,
+      "url": "https://flatfox.ch/86285007/",
+      "price": 1780,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284926,
+      "lat": 47.0530729,
+      "lon": 8.2950077,
+      "url": "https://flatfox.ch/86284926/",
+      "price": 1890,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284734,
+      "lat": 47.0338643,
+      "lon": 8.275589,
+      "url": "https://flatfox.ch/86284734/",
+      "price": 1988,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284729,
+      "lat": 47.2350391,
+      "lon": 8.4316261,
+      "url": "https://flatfox.ch/86284729/",
+      "price": 950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284707,
+      "lat": 47.2290285,
+      "lon": 8.6745333,
+      "url": "https://flatfox.ch/86284707/",
+      "price": 3800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284646,
+      "lat": 47.0256669,
+      "lon": 8.6357559,
+      "url": "https://flatfox.ch/86284646/",
+      "price": 2600,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284545,
+      "lat": 47.214424,
+      "lon": 8.3611734,
+      "url": "https://flatfox.ch/86284545/",
+      "price": 1890,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284541,
+      "lat": 47.0338643,
+      "lon": 8.275589,
+      "url": "https://flatfox.ch/86284541/",
+      "price": 1988,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284421,
+      "lat": 47.2318687,
+      "lon": 8.6712902,
+      "url": "https://flatfox.ch/86284421/",
+      "price": 2340,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86284302,
+      "lat": 47.2269969,
+      "lon": 8.259718099999999,
+      "url": "https://flatfox.ch/86284302/",
+      "price": 1820,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86196133,
+      "lat": 47.247573,
+      "lon": 8.6096455,
+      "url": "https://flatfox.ch/86196133/",
+      "price": 2480,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86283700,
+      "lat": 47.2546292,
+      "lon": 8.606539699999999,
+      "url": "https://flatfox.ch/86283700/",
+      "price": 3450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86283402,
+      "lat": 47.2539598,
+      "lon": 8.6158324,
+      "url": "https://flatfox.ch/86283402/",
+      "price": 6625,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282874,
+      "lat": 47.0822577,
+      "lon": 8.441577500000001,
+      "url": "https://flatfox.ch/86282874/",
+      "price": 1300,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282867,
+      "lat": 47.0319062,
+      "lon": 8.2763087,
+      "url": "https://flatfox.ch/86282867/",
+      "price": 600,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282754,
+      "lat": 47.22554565933665,
+      "lon": 8.649468864020262,
+      "url": "https://flatfox.ch/86282754/",
+      "price": 1900,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282670,
+      "lat": 47.0502366,
+      "lon": 8.5435509,
+      "url": "https://flatfox.ch/86282670/",
+      "price": 3850,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282350,
+      "lat": 47.2797446,
+      "lon": 8.4049745,
+      "url": "https://flatfox.ch/86282350/",
+      "price": 2450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282282,
+      "lat": 47.05767912713449,
+      "lon": 8.300687833055584,
+      "url": "https://flatfox.ch/86282282/",
+      "price": 1650,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282200,
+      "lat": 47.24836902252083,
+      "lon": 8.60793675426272,
+      "url": "https://flatfox.ch/86282200/",
+      "price": 1490,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282133,
+      "lat": 47.0339655,
+      "lon": 8.261429399999999,
+      "url": "https://flatfox.ch/86282133/",
+      "price": 1740,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86282015,
+      "lat": 47.04933481781031,
+      "lon": 8.34630250461119,
+      "url": "https://flatfox.ch/86282015/",
+      "price": 2280,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86279745,
+      "lat": 47.2719113,
+      "lon": 8.3431284,
+      "url": "https://flatfox.ch/86279745/",
+      "price": 1525,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281659,
+      "lat": 47.192891455019925,
+      "lon": 8.253531442796708,
+      "url": "https://flatfox.ch/86281659/",
+      "price": 2500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281650,
+      "lat": 47.1220216,
+      "lon": 8.396624899999999,
+      "url": "https://flatfox.ch/86281650/",
+      "price": 1200,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281508,
+      "lat": 47.0339655,
+      "lon": 8.261429399999999,
+      "url": "https://flatfox.ch/86281508/",
+      "price": 1740,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281037,
+      "lat": 47.1763475,
+      "lon": 8.3566557,
+      "url": "https://flatfox.ch/86281037/",
+      "price": 2620,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281033,
+      "lat": 47.0486404,
+      "lon": 8.3013802,
+      "url": "https://flatfox.ch/86281033/",
+      "price": 1250,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281025,
+      "lat": 47.19061139999999,
+      "lon": 8.528334599999999,
+      "url": "https://flatfox.ch/86281025/",
+      "price": 1550,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86281010,
+      "lat": 47.2711409,
+      "lon": 8.6595675,
+      "url": "https://flatfox.ch/86281010/",
+      "price": 3420,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86232246,
+      "lat": 47.2803297,
+      "lon": 8.6176089,
+      "url": "https://flatfox.ch/86232246/",
+      "price": 3810,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86219932,
+      "lat": 47.2710058,
+      "lon": 8.6528847,
+      "url": "https://flatfox.ch/86219932/",
+      "price": 3340,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86280606,
+      "lat": 47.01013714824269,
+      "lon": 8.48335287328853,
+      "url": "https://flatfox.ch/86280606/",
+      "price": 2700,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86280516,
+      "lat": 47.1763475,
+      "lon": 8.3566557,
+      "url": "https://flatfox.ch/86280516/",
+      "price": 2620,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86280342,
+      "lat": 47.1966696,
+      "lon": 8.482559799999999,
+      "url": "https://flatfox.ch/86280342/",
+      "price": 2330,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86280003,
+      "lat": 47.2091618,
+      "lon": 8.699312599999999,
+      "url": "https://flatfox.ch/86280003/",
+      "price": 3880,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86279932,
+      "lat": 47.1673939,
+      "lon": 8.3989954,
+      "url": "https://flatfox.ch/86279932/",
+      "price": 2237,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86278713,
+      "lat": 47.12259514591854,
+      "lon": 8.581871219783975,
+      "url": "https://flatfox.ch/86278713/",
+      "price": 3960,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86278249,
+      "lat": 47.0102021,
+      "lon": 8.4833558,
+      "url": "https://flatfox.ch/86278249/",
+      "price": 3450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86278096,
+      "lat": 47.274706853889,
+      "lon": 8.57929381195574,
+      "url": "https://flatfox.ch/86278096/",
+      "price": 1400,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86278025,
+      "lat": 47.27465579457733,
+      "lon": 8.579294718472134,
+      "url": "https://flatfox.ch/86278025/",
+      "price": 1400,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86277403,
+      "lat": 47.1841527,
+      "lon": 8.473951399999999,
+      "url": "https://flatfox.ch/86277403/",
+      "price": 1450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86277227,
+      "lat": 47.2753024,
+      "lon": 8.4443643,
+      "url": "https://flatfox.ch/86277227/",
+      "price": 2080,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86277044,
+      "lat": 47.09523009999999,
+      "lon": 8.2725872,
+      "url": "https://flatfox.ch/86277044/",
+      "price": 2150,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86276787,
+      "lat": 47.18658,
+      "lon": 8.4566886,
+      "url": "https://flatfox.ch/86276787/",
+      "price": 3200,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86276785,
+      "lat": 47.2987406,
+      "lon": 8.5981849,
+      "url": "https://flatfox.ch/86276785/",
+      "price": 2200,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86276702,
+      "lat": 47.0501668,
+      "lon": 8.350603999999999,
+      "url": "https://flatfox.ch/86276702/",
+      "price": 1530,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86276676,
+      "lat": 47.12257559572847,
+      "lon": 8.58185478727923,
+      "url": "https://flatfox.ch/86276676/",
+      "price": 3350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86276483,
+      "lat": 47.2714276,
+      "lon": 8.5756563,
+      "url": "https://flatfox.ch/86276483/",
+      "price": 4944,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86276235,
+      "lat": 47.2709243,
+      "lon": 8.6540945,
+      "url": "https://flatfox.ch/86276235/",
+      "price": 4380,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86274807,
+      "lat": 47.1763169,
+      "lon": 8.5016943,
+      "url": "https://flatfox.ch/86274807/",
+      "price": 3830,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86274794,
+      "lat": 47.296255,
+      "lon": 8.5600015,
+      "url": "https://flatfox.ch/86274794/",
+      "price": 2500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86274538,
+      "lat": 47.2474094,
+      "lon": 8.6347621,
+      "url": "https://flatfox.ch/86274538/",
+      "price": 2050,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86274357,
+      "lat": 47.2989012,
+      "lon": 8.3937774,
+      "url": "https://flatfox.ch/86274357/",
+      "price": 2470,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86274244,
+      "lat": 47.0848854,
+      "lon": 8.4323493,
+      "url": "https://flatfox.ch/86274244/",
+      "price": 1700,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86274053,
+      "lat": 47.1919187,
+      "lon": 8.536448,
+      "url": "https://flatfox.ch/86274053/",
+      "price": 3600,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86273195,
+      "lat": 47.0572889,
+      "lon": 8.438711099999999,
+      "url": "https://flatfox.ch/86273195/",
+      "price": 1750,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86272594,
+      "lat": 47.1844389,
+      "lon": 8.5309451,
+      "url": "https://flatfox.ch/86272594/",
+      "price": 3150,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86272098,
+      "lat": 47.2170135,
+      "lon": 8.368566699999999,
+      "url": "https://flatfox.ch/86272098/",
+      "price": 2610,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86272003,
+      "lat": 47.22551906438541,
+      "lon": 8.64957396264209,
+      "url": "https://flatfox.ch/86272003/",
+      "price": 5000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86271920,
+      "lat": 47.26247110000001,
+      "lon": 8.4088116,
+      "url": "https://flatfox.ch/86271920/",
+      "price": 1900,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86271892,
+      "lat": 47.2604879,
+      "lon": 8.3709291,
+      "url": "https://flatfox.ch/86271892/",
+      "price": 2700,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86243395,
+      "lat": 47.254969,
+      "lon": 8.6907974,
+      "url": "https://flatfox.ch/86243395/",
+      "price": 1915,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86270743,
+      "lat": 47.0435084,
+      "lon": 8.4657667,
+      "url": "https://flatfox.ch/86270743/",
+      "price": 1380,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86270713,
+      "lat": 47.0435084,
+      "lon": 8.4657667,
+      "url": "https://flatfox.ch/86270713/",
+      "price": 2980,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86270370,
+      "lat": 47.2023658,
+      "lon": 8.432099299999999,
+      "url": "https://flatfox.ch/86270370/",
+      "price": 2190,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86270181,
+      "lat": 47.2641971,
+      "lon": 8.4216672,
+      "url": "https://flatfox.ch/86270181/",
+      "price": 2327,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86260617,
+      "lat": 47.1411737,
+      "lon": 8.4293035,
+      "url": "https://flatfox.ch/86260617/",
+      "price": 2920,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86269921,
+      "lat": 47.2735661,
+      "lon": 8.4452091,
+      "url": "https://flatfox.ch/86269921/",
+      "price": 3014,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86269307,
+      "lat": 47.209706287263096,
+      "lon": 8.696256599763293,
+      "url": "https://flatfox.ch/86269307/",
+      "price": 7500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86269172,
+      "lat": 47.1763608,
+      "lon": 8.353566899999999,
+      "url": "https://flatfox.ch/86269172/",
+      "price": 3500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86269022,
+      "lat": 47.1372128,
+      "lon": 8.609018899999999,
+      "url": "https://flatfox.ch/86269022/",
+      "price": 1850,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86264722,
+      "lat": 47.1648617,
+      "lon": 8.2938668,
+      "url": "https://flatfox.ch/86264722/",
+      "price": 1570,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86251414,
+      "lat": 47.1653087,
+      "lon": 8.5211478,
+      "url": "https://flatfox.ch/86251414/",
+      "price": 5800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86268464,
+      "lat": 47.0150239,
+      "lon": 8.313036799999999,
+      "url": "https://flatfox.ch/86268464/",
+      "price": 1970,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86268387,
+      "lat": 47.1763692,
+      "lon": 8.519462899999999,
+      "url": "https://flatfox.ch/86268387/",
+      "price": 5800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86231156,
+      "lat": 47.0933363,
+      "lon": 8.3568157,
+      "url": "https://flatfox.ch/86231156/",
+      "price": 1930,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86266484,
+      "lat": 47.266053,
+      "lon": 8.2656972,
+      "url": "https://flatfox.ch/86266484/",
+      "price": 2350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86265518,
+      "lat": 47.2962624,
+      "lon": 8.6974907,
+      "url": "https://flatfox.ch/86265518/",
+      "price": 850,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86264323,
+      "lat": 47.18557070000001,
+      "lon": 8.281269,
+      "url": "https://flatfox.ch/86264323/",
+      "price": 2950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86264295,
+      "lat": 47.1384174,
+      "lon": 8.599371,
+      "url": "https://flatfox.ch/86264295/",
+      "price": 6530,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86264206,
+      "lat": 47.13286069999999,
+      "lon": 8.3151718,
+      "url": "https://flatfox.ch/86264206/",
+      "price": 2150,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86262661,
+      "lat": 47.2328965,
+      "lon": 8.3880048,
+      "url": "https://flatfox.ch/86262661/",
+      "price": 2500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86262660,
+      "lat": 47.2328965,
+      "lon": 8.3880048,
+      "url": "https://flatfox.ch/86262660/",
+      "price": 2250,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86262657,
+      "lat": 47.2328965,
+      "lon": 8.3880048,
+      "url": "https://flatfox.ch/86262657/",
+      "price": 3300,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86262320,
+      "lat": 47.15584007846545,
+      "lon": 8.53147862072253,
+      "url": "https://flatfox.ch/86262320/",
+      "price": 2580,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86262117,
+      "lat": 47.2003879,
+      "lon": 8.526752799999999,
+      "url": "https://flatfox.ch/86262117/",
+      "price": 5950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86261930,
+      "lat": 47.18118465890925,
+      "lon": 8.573805412773833,
+      "url": "https://flatfox.ch/86261930/",
+      "price": 850,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86261925,
+      "lat": 47.0870129,
+      "lon": 8.4320557,
+      "url": "https://flatfox.ch/86261925/",
+      "price": 3200,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86261715,
+      "lat": 47.04947669862,
+      "lon": 8.547121796452238,
+      "url": "https://flatfox.ch/86261715/",
+      "price": 2500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86261634,
+      "lat": 47.2797446,
+      "lon": 8.4049745,
+      "url": "https://flatfox.ch/86261634/",
+      "price": 2350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86261391,
+      "lat": 47.2776852,
+      "lon": 8.4539013,
+      "url": "https://flatfox.ch/86261391/",
+      "price": null,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86260164,
+      "lat": 47.2428335,
+      "lon": 8.460445100000001,
+      "url": "https://flatfox.ch/86260164/",
+      "price": 5800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86260138,
+      "lat": 47.0909769,
+      "lon": 8.46164,
+      "url": "https://flatfox.ch/86260138/",
+      "price": 3850,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86260064,
+      "lat": 47.200427495858506,
+      "lon": 8.526798640633666,
+      "url": "https://flatfox.ch/86260064/",
+      "price": 927,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86259888,
+      "lat": 47.058822754447924,
+      "lon": 8.25013749910178,
+      "url": "https://flatfox.ch/86259888/",
+      "price": 2940,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86259651,
+      "lat": 47.1674987,
+      "lon": 8.2999913,
+      "url": "https://flatfox.ch/86259651/",
+      "price": 1736,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86254685,
+      "lat": 47.2718682,
+      "lon": 8.3429945,
+      "url": "https://flatfox.ch/86254685/",
+      "price": 1495,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86258980,
+      "lat": 47.13440689999999,
+      "lon": 8.3195573,
+      "url": "https://flatfox.ch/86258980/",
+      "price": 2650,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86258404,
+      "lat": 47.2991276,
+      "lon": 8.5988317,
+      "url": "https://flatfox.ch/86258404/",
+      "price": 2000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86258043,
+      "lat": 47.128795051297594,
+      "lon": 8.366704538255286,
+      "url": "https://flatfox.ch/86258043/",
+      "price": 990,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86258034,
+      "lat": 47.1183388,
+      "lon": 8.3344195,
+      "url": "https://flatfox.ch/86258034/",
+      "price": 990,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86257764,
+      "lat": 47.01845772170007,
+      "lon": 8.307942614100908,
+      "url": "https://flatfox.ch/86257764/",
+      "price": 1450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86257433,
+      "lat": 47.109598,
+      "lon": 8.3940725,
+      "url": "https://flatfox.ch/86257433/",
+      "price": 2140,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86256549,
+      "lat": 47.09672938633003,
+      "lon": 8.46304899023428,
+      "url": "https://flatfox.ch/86256549/",
+      "price": 2190,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86256200,
+      "lat": 47.2151534,
+      "lon": 8.6069111,
+      "url": "https://flatfox.ch/86256200/",
+      "price": 2650,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86255383,
+      "lat": 47.287589016382306,
+      "lon": 8.431222566466623,
+      "url": "https://flatfox.ch/86255383/",
+      "price": 1500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86255218,
+      "lat": 47.28760998587623,
+      "lon": 8.431344134946086,
+      "url": "https://flatfox.ch/86255218/",
+      "price": 1500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86254243,
+      "lat": 47.17718620000001,
+      "lon": 8.4271707,
+      "url": "https://flatfox.ch/86254243/",
+      "price": 3950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86255913,
+      "lat": 47.284547296929134,
+      "lon": 8.550622289474553,
+      "url": "https://flatfox.ch/86255913/",
+      "price": 2159,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86252114,
+      "lat": 47.2625153,
+      "lon": 8.3727093,
+      "url": "https://flatfox.ch/86252114/",
+      "price": 1995,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86251790,
+      "lat": 47.2990405,
+      "lon": 8.3147242,
+      "url": "https://flatfox.ch/86251790/",
+      "price": 1320,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86251650,
+      "lat": 47.2949244,
+      "lon": 8.6959841,
+      "url": "https://flatfox.ch/86251650/",
+      "price": 1590,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86249252,
+      "lat": 47.2671462,
+      "lon": 8.6852401,
+      "url": "https://flatfox.ch/86249252/",
+      "price": 3690,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86250378,
+      "lat": 47.20974629145903,
+      "lon": 8.696212557520433,
+      "url": "https://flatfox.ch/86250378/",
+      "price": 3690,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86173510,
+      "lat": 47.259595,
+      "lon": 8.685803199999999,
+      "url": "https://flatfox.ch/86173510/",
+      "price": 2480,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86249401,
+      "lat": 47.12874590485279,
+      "lon": 8.366656774646605,
+      "url": "https://flatfox.ch/86249401/",
+      "price": 1800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86249017,
+      "lat": 47.0511086,
+      "lon": 8.5519765,
+      "url": "https://flatfox.ch/86249017/",
+      "price": 1420,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86248967,
+      "lat": 47.1996597,
+      "lon": 8.5283578,
+      "url": "https://flatfox.ch/86248967/",
+      "price": 3290,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86248940,
+      "lat": 47.1892605,
+      "lon": 8.3942817,
+      "url": "https://flatfox.ch/86248940/",
+      "price": 2810,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86248849,
+      "lat": 47.0938162,
+      "lon": 8.308271999999999,
+      "url": "https://flatfox.ch/86248849/",
+      "price": 1790,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86247815,
+      "lat": 47.0086722,
+      "lon": 8.4834809,
+      "url": "https://flatfox.ch/86247815/",
+      "price": 4750,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86247310,
+      "lat": 47.22553660710174,
+      "lon": 8.649469578924469,
+      "url": "https://flatfox.ch/86247310/",
+      "price": 1380,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86246838,
+      "lat": 47.02901671585743,
+      "lon": 8.630147068734347,
+      "url": "https://flatfox.ch/86246838/",
+      "price": 1340,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86245898,
+      "lat": 47.0970527,
+      "lon": 8.4630928,
+      "url": "https://flatfox.ch/86245898/",
+      "price": 1220,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86245561,
+      "lat": 47.192938647055136,
+      "lon": 8.253554307321421,
+      "url": "https://flatfox.ch/86245561/",
+      "price": 1800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86242964,
+      "lat": 47.22226232795241,
+      "lon": 8.463715436793878,
+      "url": "https://flatfox.ch/86242964/",
+      "price": 3050,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86242708,
+      "lat": 47.0817105,
+      "lon": 8.6286766,
+      "url": "https://flatfox.ch/86242708/",
+      "price": 1740,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86242631,
+      "lat": 47.095226,
+      "lon": 8.272598,
+      "url": "https://flatfox.ch/86242631/",
+      "price": 2150,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86240540,
+      "lat": 47.1473171,
+      "lon": 8.5072741,
+      "url": "https://flatfox.ch/86240540/",
+      "price": 2280,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86238052,
+      "lat": 47.00300190000001,
+      "lon": 8.600215799999999,
+      "url": "https://flatfox.ch/86238052/",
+      "price": 5950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86237607,
+      "lat": 47.24396549999999,
+      "lon": 8.464853999999999,
+      "url": "https://flatfox.ch/86237607/",
+      "price": 3350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86236564,
+      "lat": 47.2433539,
+      "lon": 8.464326699999999,
+      "url": "https://flatfox.ch/86236564/",
+      "price": 2660,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86161734,
+      "lat": 47.0183532,
+      "lon": 8.304115099999999,
+      "url": "https://flatfox.ch/86161734/",
+      "price": 2780,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86232602,
+      "lat": 47.155825213853824,
+      "lon": 8.531431953499759,
+      "url": "https://flatfox.ch/86232602/",
+      "price": 13100,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86230161,
+      "lat": 47.2653128,
+      "lon": 8.6625676,
+      "url": "https://flatfox.ch/86230161/",
+      "price": 2785,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86229060,
+      "lat": 47.27359908862734,
+      "lon": 8.341501754595948,
+      "url": "https://flatfox.ch/86229060/",
+      "price": 3000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86228414,
+      "lat": 47.29028530000001,
+      "lon": 8.6188367,
+      "url": "https://flatfox.ch/86228414/",
+      "price": 2190,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 85895452,
+      "lat": 47.2963732,
+      "lon": 8.690632299999999,
+      "url": "https://flatfox.ch/85895452/",
+      "price": 2599,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86227206,
+      "lat": 47.109558890332195,
+      "lon": 8.394103286152918,
+      "url": "https://flatfox.ch/86227206/",
+      "price": 2990,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86225345,
+      "lat": 47.1966884,
+      "lon": 8.412224199999999,
+      "url": "https://flatfox.ch/86225345/",
+      "price": 3980,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86223453,
+      "lat": 47.2213269,
+      "lon": 8.465611899999999,
+      "url": "https://flatfox.ch/86223453/",
+      "price": 3050,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86221262,
+      "lat": 47.05050960000001,
+      "lon": 8.382574,
+      "url": "https://flatfox.ch/86221262/",
+      "price": 2690,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86220807,
+      "lat": 47.09384178404863,
+      "lon": 8.30824720489148,
+      "url": "https://flatfox.ch/86220807/",
+      "price": 1800,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86219374,
+      "lat": 47.03376189999999,
+      "lon": 8.458762,
+      "url": "https://flatfox.ch/86219374/",
+      "price": 2450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86218949,
+      "lat": 47.1028861,
+      "lon": 8.669262,
+      "url": "https://flatfox.ch/86218949/",
+      "price": 3000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86217885,
+      "lat": 47.222562,
+      "lon": 8.2586694,
+      "url": "https://flatfox.ch/86217885/",
+      "price": 3950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86217793,
+      "lat": 47.10507,
+      "lon": 8.64062,
+      "url": "https://flatfox.ch/86217793/",
+      "price": 5580,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86217130,
+      "lat": 47.254623465327526,
+      "lon": 8.524953265817448,
+      "url": "https://flatfox.ch/86217130/",
+      "price": 2620,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86216419,
+      "lat": 47.1423924,
+      "lon": 8.4288083,
+      "url": "https://flatfox.ch/86216419/",
+      "price": 3300,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86215604,
+      "lat": 47.20117900728362,
+      "lon": 8.58146041313928,
+      "url": "https://flatfox.ch/86215604/",
+      "price": 1880,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86213057,
+      "lat": 47.2907368,
+      "lon": 8.6169619,
+      "url": "https://flatfox.ch/86213057/",
+      "price": 5950,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86212845,
+      "lat": 47.0522247,
+      "lon": 8.5833285,
+      "url": "https://flatfox.ch/86212845/",
+      "price": 1400,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86208430,
+      "lat": 47.1480079,
+      "lon": 8.565803599999999,
+      "url": "https://flatfox.ch/86208430/",
+      "price": 1380,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86207896,
+      "lat": 47.28315749999999,
+      "lon": 8.5504593,
+      "url": "https://flatfox.ch/86207896/",
+      "price": 2450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86161249,
+      "lat": 47.2798764,
+      "lon": 8.3664465,
+      "url": "https://flatfox.ch/86161249/",
+      "price": 2500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86164070,
+      "lat": 47.1250273,
+      "lon": 8.3247005,
+      "url": "https://flatfox.ch/86164070/",
+      "price": 1720,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86193462,
+      "lat": 47.2310182,
+      "lon": 8.3464817,
+      "url": "https://flatfox.ch/86193462/",
+      "price": 3000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86191853,
+      "lat": 47.0126782,
+      "lon": 8.301472,
+      "url": "https://flatfox.ch/86191853/",
+      "price": 1450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86191690,
+      "lat": 47.073566,
+      "lon": 8.332409,
+      "url": "https://flatfox.ch/86191690/",
+      "price": 2900,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86189505,
+      "lat": 47.05310619999999,
+      "lon": 8.251587299999999,
+      "url": "https://flatfox.ch/86189505/",
+      "price": 2200,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86137006,
+      "lat": 47.2450644,
+      "lon": 8.5319099,
+      "url": "https://flatfox.ch/86137006/",
+      "price": 1914,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86182339,
+      "lat": 47.0522247,
+      "lon": 8.5833285,
+      "url": "https://flatfox.ch/86182339/",
+      "price": 1400,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86173343,
+      "lat": 47.298158,
+      "lon": 8.4455794,
+      "url": "https://flatfox.ch/86173343/",
+      "price": 2530,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86169988,
+      "lat": 47.1667424,
+      "lon": 8.515748100000001,
+      "url": "https://flatfox.ch/86169988/",
+      "price": 5095,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86161915,
+      "lat": 47.0548316,
+      "lon": 8.4319364,
+      "url": "https://flatfox.ch/86161915/",
+      "price": 3100,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86160453,
+      "lat": 47.1062821,
+      "lon": 8.3858566,
+      "url": "https://flatfox.ch/86160453/",
+      "price": 3290,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86011417,
+      "lat": 47.19362779999999,
+      "lon": 8.6794228,
+      "url": "https://flatfox.ch/86011417/",
+      "price": 3450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86146063,
+      "lat": 47.2506923,
+      "lon": 8.4032803,
+      "url": "https://flatfox.ch/86146063/",
+      "price": 3000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86103114,
+      "lat": 47.10248630860984,
+      "lon": 8.256790281261862,
+      "url": "https://flatfox.ch/86103114/",
+      "price": 3500,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86097614,
+      "lat": 47.1242659,
+      "lon": 8.446156199999999,
+      "url": "https://flatfox.ch/86097614/",
+      "price": 3000,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86069796,
+      "lat": 47.07646613854313,
+      "lon": 8.543810705192506,
+      "url": "https://flatfox.ch/86069796/",
+      "price": 1450,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86065773,
+      "lat": 47.21565113951499,
+      "lon": 8.28676361056186,
+      "url": "https://flatfox.ch/86065773/",
+      "price": 2400,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86041083,
+      "lat": 47.254596242026814,
+      "lon": 8.524876341664749,
+      "url": "https://flatfox.ch/86041083/",
+      "price": 2750,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86034934,
+      "lat": 47.142754998873976,
+      "lon": 8.443044898114653,
+      "url": "https://flatfox.ch/86034934/",
+      "price": 2350,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 86030178,
+      "lat": 47.0841337,
+      "lon": 8.442560499999999,
+      "url": "https://flatfox.ch/86030178/",
+      "price": 2650,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 85903716,
+      "lat": 47.1783907,
+      "lon": 8.590831699999999,
+      "url": "https://flatfox.ch/85903716/",
+      "price": 1990,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 85977467,
+      "lat": 47.2694783,
+      "lon": 8.4934487,
+      "url": "https://flatfox.ch/85977467/",
+      "price": 4840,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 85977464,
+      "lat": 47.2691856,
+      "lon": 8.4932246,
+      "url": "https://flatfox.ch/85977464/",
+      "price": 3980,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 85899485,
+      "lat": 47.1496827,
+      "lon": 8.564015699999999,
+      "url": "https://flatfox.ch/85899485/",
+      "price": 2540,
+      "price_unit": "monthly"
+    },
+    {
+      "id": 85933289,
+      "lat": 47.2270396,
+      "lon": 8.5251766,
+      "url": "https://flatfox.ch/85933289/",
+      "price": 1930,
+      "price_unit": "monthly"
+    }
+  ]
+}

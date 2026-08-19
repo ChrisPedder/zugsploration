@@ -4,9 +4,10 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   initMap();
-  await loadRentalData();
+  await Promise.all([loadRentalData(), loadFlatfoxListings()]);
   loadMunicipalities();
   loadCyclingNetwork();
+  renderFlatfoxListings();
   setupControls();
 });
 
@@ -22,12 +23,18 @@ function setupControls() {
     e.target.checked ? map.addLayer(cyclingNetworkLayer) : map.removeLayer(cyclingNetworkLayer);
   });
 
+  document.getElementById("toggle-flatfox").addEventListener("change", (e) => {
+    if (!flatfoxLayer) return;
+    e.target.checked ? map.addLayer(flatfoxLayer) : map.removeLayer(flatfoxLayer);
+  });
+
   // Filter sliders
   const maxRentSlider = document.getElementById("maxRent");
   const maxRentLabel = document.getElementById("maxRent-value");
   maxRentSlider.addEventListener("input", () => {
     maxRentLabel.textContent = `CHF ${parseInt(maxRentSlider.value).toLocaleString()}`;
     refreshMunicipalityStyles();
+    refreshFlatfoxListings();
   });
 
   const maxTimeSlider = document.getElementById("maxTime");
@@ -66,6 +73,28 @@ function setupControls() {
     if (startMarker) {
       map.removeLayer(startMarker);
       startMarker = null;
+    }
+  });
+
+  // Scrape fresh Flatfox listings
+  document.getElementById("scrape-flatfox").addEventListener("click", async () => {
+    const btn = document.getElementById("scrape-flatfox");
+    const status = document.getElementById("scrape-status");
+    btn.disabled = true;
+    btn.textContent = "Fetching...";
+    status.textContent = "";
+    status.className = "scrape-status";
+    try {
+      await refreshFlatfoxFromAPI();
+      renderFlatfoxListings();
+      status.textContent = `${flatfoxListings.length} listings loaded`;
+      status.classList.add("success");
+    } catch (err) {
+      status.textContent = err.message;
+      status.classList.add("error");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Refresh listings";
     }
   });
 

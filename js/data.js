@@ -52,11 +52,28 @@ const MUNICIPALITY_CENTRES = {
 };
 
 let rentalData = null;
+let flatfoxListings = null;
 
 async function loadRentalData() {
   const resp = await fetch("data/rental-data.json");
   rentalData = await resp.json();
   return rentalData;
+}
+
+async function loadFlatfoxListings() {
+  const resp = await fetch("data/flatfox-listings.json");
+  const data = await resp.json();
+  flatfoxListings = data.listings || [];
+  return flatfoxListings;
+}
+
+async function refreshFlatfoxFromAPI() {
+  const resp = await fetch("/api/flatfox");
+  if (!resp.ok) throw new Error(`Flatfox API returned ${resp.status}`);
+  const data = await resp.json();
+  if (data.error) throw new Error(data.error);
+  flatfoxListings = data.listings || [];
+  return flatfoxListings;
 }
 
 function getRentalInfo(municipalityName) {

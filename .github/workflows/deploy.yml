@@ -1,0 +1,51 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::227655494509:role/zugsploration-github-deploy
+          aws-region: eu-central-1
+
+      - name: Install CDK dependencies
+        working-directory: infra
+        run: npm ci
+
+      - name: Install auth Lambda dependencies
+        working-directory: infra/lambda/auth
+        run: npm ci
+
+      - name: CDK deploy
+        working-directory: infra
+        run: npx cdk deploy --all --require-approval never --outputs-file outputs.json
+
+      - name: Print outputs
+        if: success()
+        working-directory: infra
+        run: |
+          python3 -c "
+          import json
+          with open('outputs.json') as f:
+              outputs = json.load(f)
+          for stack, vals in outputs.items():
+              for key, val in vals.items():
+                  print(f'{key}: {val}')
+          "
