@@ -243,7 +243,7 @@ export class ZugsplorationStack extends cdk.Stack {
           },
           StringLike: {
             "token.actions.githubusercontent.com:sub":
-              "repo:ChrisPedder/zugsploration:*",
+              "repo:ChrisPedder@*/zugsploration@*:*",
           },
         }
       ),
