@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-08-19T20:28:02.294805+00:00",
-  "source": "Flatfox public API (pin endpoint)",
+  "fetchedAt": "2026-08-19T20:41:47.737098+00:00",
+  "source": "Flatfox public API (pin + public-listing endpoints)",
   "bbox": {
     "north": 47.3,
     "south": 47.0,
@@ -15,7 +15,11 @@
       "lon": 8.2656972,
       "url": "https://flatfox.ch/86288116/",
       "price": 2350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "surface": 120,
+      "address": "Alte Poststrasse 12A",
+      "city": "Schongau"
     },
     {
       "id": 86288101,
@@ -23,7 +27,11 @@
       "lon": 8.6676716,
       "url": "https://flatfox.ch/86288101/",
       "price": 2510,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 102,
+      "address": "Obere Leihofstrasse 21",
+      "city": "Wädenswil"
     },
     {
       "id": 86288084,
@@ -31,7 +39,11 @@
       "lon": 8.2674992,
       "url": "https://flatfox.ch/86288084/",
       "price": 1350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 58,
+      "address": "Schöneggstrasse 16",
+      "city": "Hitzkirch"
     },
     {
       "id": 86288075,
@@ -39,7 +51,11 @@
       "lon": 8.3162802,
       "url": "https://flatfox.ch/86288075/",
       "price": 2860,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 76,
+      "address": "Tribschenstrasse 62",
+      "city": "Luzern"
     },
     {
       "id": 86288074,
@@ -47,7 +63,11 @@
       "lon": 8.3162802,
       "url": "https://flatfox.ch/86288074/",
       "price": 2860,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 76,
+      "address": "Tribschenstrasse 62",
+      "city": "Luzern"
     },
     {
       "id": 86288063,
@@ -55,7 +75,10 @@
       "lon": 8.560225802223968,
       "url": "https://flatfox.ch/86288063/",
       "price": 2360,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 80,
+      "city": "Thalwil"
     },
     {
       "id": 86168356,
@@ -63,7 +86,11 @@
       "lon": 8.3078646,
       "url": "https://flatfox.ch/86168356/",
       "price": 2000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 76,
+      "address": "Neuweg 8",
+      "city": "Luzern"
     },
     {
       "id": 86287893,
@@ -71,7 +98,11 @@
       "lon": 8.265513,
       "url": "https://flatfox.ch/86287893/",
       "price": 1780,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "surface": 110,
+      "address": "Hitzkircherstrasse 12",
+      "city": "Gelfingen"
     },
     {
       "id": 86208600,
@@ -79,7 +110,11 @@
       "lon": 8.2921581,
       "url": "https://flatfox.ch/86208600/",
       "price": 2790,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 6.5,
+      "surface": 167,
+      "address": "Rüeggisingerstrasse 126a",
+      "city": "Emmen"
     },
     {
       "id": 86287872,
@@ -87,7 +122,11 @@
       "lon": 8.3886004,
       "url": "https://flatfox.ch/86287872/",
       "price": 1550,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 65,
+      "address": "Luzernerstrasse 7",
+      "city": "Root"
     },
     {
       "id": 86287766,
@@ -95,7 +134,11 @@
       "lon": 8.3154369,
       "url": "https://flatfox.ch/86287766/",
       "price": 1850,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 67,
+      "address": "Geissensteinring 43",
+      "city": "Luzern"
     },
     {
       "id": 86287677,
@@ -103,7 +146,11 @@
       "lon": 8.27963,
       "url": "https://flatfox.ch/86287677/",
       "price": 2095,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 79,
+      "address": "Gerliswilstrasse 24",
+      "city": "Emmenbrücke"
     },
     {
       "id": 86287655,
@@ -111,7 +158,10 @@
       "lon": 8.2898437,
       "url": "https://flatfox.ch/86287655/",
       "price": 1550,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "address": "Meilipromenade 13",
+      "city": "Emmen"
     },
     {
       "id": 86270471,
@@ -119,7 +169,11 @@
       "lon": 8.308394999999999,
       "url": "https://flatfox.ch/86270471/",
       "price": 2000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 82,
+      "address": "Friedentalstrasse 5",
+      "city": "Luzern"
     },
     {
       "id": 86287174,
@@ -127,7 +181,11 @@
       "lon": 8.307120099999999,
       "url": "https://flatfox.ch/86287174/",
       "price": 1820,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 56,
+      "address": "Allmendstrasse 3A",
+      "city": "Horw"
     },
     {
       "id": 86286459,
@@ -135,7 +193,9 @@
       "lon": 8.560206394203126,
       "url": "https://flatfox.ch/86286459/",
       "price": 1950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "city": "Thalwil"
     },
     {
       "id": 86286455,
@@ -143,7 +203,11 @@
       "lon": 8.4539806,
       "url": "https://flatfox.ch/86286455/",
       "price": 4650,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 124,
+      "address": "Lorzenparkstrasse 23, N1",
+      "city": "Cham"
     },
     {
       "id": 86286266,
@@ -151,7 +215,10 @@
       "lon": 8.453420286200895,
       "url": "https://flatfox.ch/86286266/",
       "price": 1400,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 30,
+      "city": "Hedingen"
     },
     {
       "id": 86286179,
@@ -159,7 +226,11 @@
       "lon": 8.6178615,
       "url": "https://flatfox.ch/86286179/",
       "price": 3996,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.0,
+      "surface": 132,
+      "address": "Käpfnerweg 28",
+      "city": "Horgen"
     },
     {
       "id": 86285007,
@@ -167,7 +238,11 @@
       "lon": 8.2548548,
       "url": "https://flatfox.ch/86285007/",
       "price": 1780,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 83,
+      "address": "Brunnenhöfli 15",
+      "city": "Obernau"
     },
     {
       "id": 86284926,
@@ -175,7 +250,11 @@
       "lon": 8.2950077,
       "url": "https://flatfox.ch/86284926/",
       "price": 1890,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 55,
+      "address": "Baselstrasse 43",
+      "city": "Luzern"
     },
     {
       "id": 86284734,
@@ -183,7 +262,11 @@
       "lon": 8.275589,
       "url": "https://flatfox.ch/86284734/",
       "price": 1988,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 70,
+      "address": "Kosthausstrasse 6",
+      "city": "Pilatus Kulm"
     },
     {
       "id": 86284729,
@@ -191,7 +274,10 @@
       "lon": 8.4316261,
       "url": "https://flatfox.ch/86284729/",
       "price": 950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "address": "Dörflistrasse",
+      "city": "Maschwanden"
     },
     {
       "id": 86284707,
@@ -199,7 +285,11 @@
       "lon": 8.6745333,
       "url": "https://flatfox.ch/86284707/",
       "price": 3800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 75,
+      "address": "Seestrasse",
+      "city": "Horgen"
     },
     {
       "id": 86284646,
@@ -207,7 +297,11 @@
       "lon": 8.6357559,
       "url": "https://flatfox.ch/86284646/",
       "price": 2600,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 106,
+      "address": "Bahnhofstrasse 114",
+      "city": "Seewen SZ"
     },
     {
       "id": 86284545,
@@ -215,7 +309,11 @@
       "lon": 8.3611734,
       "url": "https://flatfox.ch/86284545/",
       "price": 1890,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 80,
+      "address": "Steiggistrasse 12",
+      "city": "Auw"
     },
     {
       "id": 86284541,
@@ -223,7 +321,11 @@
       "lon": 8.275589,
       "url": "https://flatfox.ch/86284541/",
       "price": 1988,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 70,
+      "address": "Kosthausstrasse 6",
+      "city": "Kriens"
     },
     {
       "id": 86284421,
@@ -231,7 +333,11 @@
       "lon": 8.6712902,
       "url": "https://flatfox.ch/86284421/",
       "price": 2340,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 83,
+      "address": "Seestrasse 145",
+      "city": "Wädenswil"
     },
     {
       "id": 86284302,
@@ -239,7 +345,11 @@
       "lon": 8.259718099999999,
       "url": "https://flatfox.ch/86284302/",
       "price": 1820,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 105,
+      "address": "Ermenseestrasse 7",
+      "city": "Hitzkirch"
     },
     {
       "id": 86196133,
@@ -247,7 +357,11 @@
       "lon": 8.6096455,
       "url": "https://flatfox.ch/86196133/",
       "price": 2480,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 90,
+      "address": "Bachtelstrasse 50",
+      "city": "Horgen"
     },
     {
       "id": 86283700,
@@ -255,7 +369,11 @@
       "lon": 8.606539699999999,
       "url": "https://flatfox.ch/86283700/",
       "price": 3450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 127,
+      "address": "Waidlistrasse 7",
+      "city": "Horgen"
     },
     {
       "id": 86283402,
@@ -263,7 +381,11 @@
       "lon": 8.6158324,
       "url": "https://flatfox.ch/86283402/",
       "price": 6625,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 8.5,
+      "surface": 290,
+      "address": "Käpfnerweg 6A",
+      "city": "Horgen"
     },
     {
       "id": 86282874,
@@ -271,7 +393,11 @@
       "lon": 8.441577500000001,
       "url": "https://flatfox.ch/86282874/",
       "price": 1300,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "surface": 100,
+      "address": "Oberdorf 15",
+      "city": "Küssnacht am Rigi"
     },
     {
       "id": 86282867,
@@ -279,7 +405,11 @@
       "lon": 8.2763087,
       "url": "https://flatfox.ch/86282867/",
       "price": 600,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "surface": 17,
+      "address": "Spitzmattstrasse",
+      "city": "Pilatus Kulm"
     },
     {
       "id": 86282754,
@@ -287,7 +417,10 @@
       "lon": 8.649468864020262,
       "url": "https://flatfox.ch/86282754/",
       "price": 1900,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 69,
+      "city": "Wädenswil"
     },
     {
       "id": 86282670,
@@ -295,7 +428,11 @@
       "lon": 8.5435509,
       "url": "https://flatfox.ch/86282670/",
       "price": 3850,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 123,
+      "address": "Harmettlenstrasse 3",
+      "city": "Goldau"
     },
     {
       "id": 86282350,
@@ -303,7 +440,11 @@
       "lon": 8.4049745,
       "url": "https://flatfox.ch/86282350/",
       "price": 2450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 103,
+      "address": "Alter Postweg 4",
+      "city": "Ottenbach"
     },
     {
       "id": 86282282,
@@ -311,7 +452,10 @@
       "lon": 8.300687833055584,
       "url": "https://flatfox.ch/86282282/",
       "price": 1650,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 50,
+      "city": "Luzern"
     },
     {
       "id": 86282200,
@@ -319,7 +463,10 @@
       "lon": 8.60793675426272,
       "url": "https://flatfox.ch/86282200/",
       "price": 1490,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 35,
+      "city": "Horgen"
     },
     {
       "id": 86282133,
@@ -327,7 +474,11 @@
       "lon": 8.261429399999999,
       "url": "https://flatfox.ch/86282133/",
       "price": 1740,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 52,
+      "address": "Sackweidstr1",
+      "city": "Kriens"
     },
     {
       "id": 86282015,
@@ -335,7 +486,10 @@
       "lon": 8.34630250461119,
       "url": "https://flatfox.ch/86282015/",
       "price": 2280,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 84,
+      "city": "Luzern"
     },
     {
       "id": 86279745,
@@ -343,7 +497,11 @@
       "lon": 8.3431284,
       "url": "https://flatfox.ch/86279745/",
       "price": 1525,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 53,
+      "address": "Luzernerstrasse 17g",
+      "city": "Muri AG"
     },
     {
       "id": 86281659,
@@ -351,7 +509,10 @@
       "lon": 8.253531442796708,
       "url": "https://flatfox.ch/86281659/",
       "price": 2500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "surface": 111,
+      "city": "Retschwil"
     },
     {
       "id": 86281650,
@@ -359,7 +520,11 @@
       "lon": 8.396624899999999,
       "url": "https://flatfox.ch/86281650/",
       "price": 1200,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 53,
+      "address": "Klausmattstrasse 4",
+      "city": "Honau"
     },
     {
       "id": 86281508,
@@ -367,7 +532,11 @@
       "lon": 8.261429399999999,
       "url": "https://flatfox.ch/86281508/",
       "price": 1740,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 52,
+      "address": "Sackweidstr 1",
+      "city": "Kriens"
     },
     {
       "id": 86281037,
@@ -375,7 +544,11 @@
       "lon": 8.3566557,
       "url": "https://flatfox.ch/86281037/",
       "price": 2620,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 129,
+      "address": "Hofmatt 4",
+      "city": "Abtwil AG"
     },
     {
       "id": 86281033,
@@ -383,7 +556,10 @@
       "lon": 8.3013802,
       "url": "https://flatfox.ch/86281033/",
       "price": 1250,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "address": "Bruchstrasse",
+      "city": "Luzern"
     },
     {
       "id": 86281025,
@@ -391,7 +567,10 @@
       "lon": 8.528334599999999,
       "url": "https://flatfox.ch/86281025/",
       "price": 1550,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "address": "Inwilerstrasse 31",
+      "city": "Baar"
     },
     {
       "id": 86281010,
@@ -399,7 +578,11 @@
       "lon": 8.6595675,
       "url": "https://flatfox.ch/86281010/",
       "price": 3420,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 110,
+      "address": "Haltenstrasse 138",
+      "city": "Meilen"
     },
     {
       "id": 86232246,
@@ -407,7 +590,11 @@
       "lon": 8.6176089,
       "url": "https://flatfox.ch/86232246/",
       "price": 3810,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 108,
+      "address": "Feldhofstrasse 4",
+      "city": "Feldmeilen"
     },
     {
       "id": 86219932,
@@ -415,7 +602,11 @@
       "lon": 8.6528847,
       "url": "https://flatfox.ch/86219932/",
       "price": 3340,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 101,
+      "address": "Ormisstr. 123",
+      "city": "Meilen"
     },
     {
       "id": 86280606,
@@ -423,7 +614,10 @@
       "lon": 8.48335287328853,
       "url": "https://flatfox.ch/86280606/",
       "price": 2700,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 93,
+      "city": "Vitznau"
     },
     {
       "id": 86280516,
@@ -431,7 +625,11 @@
       "lon": 8.3566557,
       "url": "https://flatfox.ch/86280516/",
       "price": 2620,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 129,
+      "address": "Hofmatt 4",
+      "city": "Abtwil"
     },
     {
       "id": 86280342,
@@ -439,7 +637,11 @@
       "lon": 8.482559799999999,
       "url": "https://flatfox.ch/86280342/",
       "price": 2330,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 45,
+      "address": "Bahnhofstr. 26",
+      "city": "Steinhausen"
     },
     {
       "id": 86280003,
@@ -447,7 +649,11 @@
       "lon": 8.699312599999999,
       "url": "https://flatfox.ch/86280003/",
       "price": 3880,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 105,
+      "address": "Breitenstrasse 10",
+      "city": "Richterswil"
     },
     {
       "id": 86279932,
@@ -455,7 +661,11 @@
       "lon": 8.3989954,
       "url": "https://flatfox.ch/86279932/",
       "price": 2237,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 158,
+      "address": "Beugenstrasse 6",
+      "city": "Oberrüti AG"
     },
     {
       "id": 86278713,
@@ -463,7 +673,10 @@
       "lon": 8.581871219783975,
       "url": "https://flatfox.ch/86278713/",
       "price": 3960,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 150,
+      "city": "Unterägeri"
     },
     {
       "id": 86278249,
@@ -471,7 +684,11 @@
       "lon": 8.4833558,
       "url": "https://flatfox.ch/86278249/",
       "price": 3450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 40,
+      "address": "Auf Anfrage",
+      "city": "Vitznau"
     },
     {
       "id": 86278096,
@@ -479,7 +696,9 @@
       "lon": 8.57929381195574,
       "url": "https://flatfox.ch/86278096/",
       "price": 1400,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "city": "Oberrieden"
     },
     {
       "id": 86278025,
@@ -487,7 +706,10 @@
       "lon": 8.579294718472134,
       "url": "https://flatfox.ch/86278025/",
       "price": 1400,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 56,
+      "city": "Oberrieden"
     },
     {
       "id": 86277403,
@@ -495,7 +717,11 @@
       "lon": 8.473951399999999,
       "url": "https://flatfox.ch/86277403/",
       "price": 1450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 30,
+      "address": "Alpenblick 3",
+      "city": "Cham"
     },
     {
       "id": 86277227,
@@ -503,7 +729,11 @@
       "lon": 8.4443643,
       "url": "https://flatfox.ch/86277227/",
       "price": 2080,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 40,
+      "address": "Alte Obfelderstrasse 25",
+      "city": "Affoltern am Albis"
     },
     {
       "id": 86277044,
@@ -511,7 +741,11 @@
       "lon": 8.2725872,
       "url": "https://flatfox.ch/86277044/",
       "price": 2150,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 100,
+      "address": "Friedauweg 6",
+      "city": "Rothenburg"
     },
     {
       "id": 86276787,
@@ -519,7 +753,11 @@
       "lon": 8.4566886,
       "url": "https://flatfox.ch/86276787/",
       "price": 3200,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 120,
+      "address": "Maschinengasse 21",
+      "city": "Cham"
     },
     {
       "id": 86276785,
@@ -527,7 +765,11 @@
       "lon": 8.5981849,
       "url": "https://flatfox.ch/86276785/",
       "price": 2200,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 75,
+      "address": "Zollerstrasse 16",
+      "city": "Erlenbach"
     },
     {
       "id": 86276702,
@@ -535,7 +777,11 @@
       "lon": 8.350603999999999,
       "url": "https://flatfox.ch/86276702/",
       "price": 1530,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 50,
+      "address": "Kreuzbuchrain 10",
+      "city": "Luzern"
     },
     {
       "id": 86276676,
@@ -543,7 +789,10 @@
       "lon": 8.58185478727923,
       "url": "https://flatfox.ch/86276676/",
       "price": 3350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 128,
+      "city": "Unterägeri"
     },
     {
       "id": 86276483,
@@ -551,7 +800,11 @@
       "lon": 8.5756563,
       "url": "https://flatfox.ch/86276483/",
       "price": 4944,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 121,
+      "address": "Säntisstrasse 5c",
+      "city": "Oberrieden"
     },
     {
       "id": 86276235,
@@ -559,7 +812,11 @@
       "lon": 8.6540945,
       "url": "https://flatfox.ch/86276235/",
       "price": 4380,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 112,
+      "address": "Pfannenstielstrasse 112",
+      "city": "Meilen"
     },
     {
       "id": 86274807,
@@ -567,7 +824,10 @@
       "lon": 8.5016943,
       "url": "https://flatfox.ch/86274807/",
       "price": 3830,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "address": "Chamerstrasse 68",
+      "city": "Zug"
     },
     {
       "id": 86274794,
@@ -575,7 +835,11 @@
       "lon": 8.5600015,
       "url": "https://flatfox.ch/86274794/",
       "price": 2500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 80,
+      "address": "Tödistrasse 126",
+      "city": "Thalwil"
     },
     {
       "id": 86274538,
@@ -583,7 +847,11 @@
       "lon": 8.6347621,
       "url": "https://flatfox.ch/86274538/",
       "price": 2050,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 62,
+      "address": "Alte Landstrasse 100",
+      "city": "Au ZH"
     },
     {
       "id": 86274357,
@@ -591,7 +859,11 @@
       "lon": 8.3937774,
       "url": "https://flatfox.ch/86274357/",
       "price": 2470,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 108,
+      "address": "Staldenstrasse 19",
+      "city": "Jonen"
     },
     {
       "id": 86274244,
@@ -599,7 +871,11 @@
       "lon": 8.4323493,
       "url": "https://flatfox.ch/86274244/",
       "price": 1700,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 55,
+      "address": "Gloriweidstrasse",
+      "city": "Küssnacht am Rigi"
     },
     {
       "id": 86274053,
@@ -607,7 +883,11 @@
       "lon": 8.536448,
       "url": "https://flatfox.ch/86274053/",
       "price": 3600,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 120,
+      "address": "Burgmatt 15",
+      "city": "Baar"
     },
     {
       "id": 86273195,
@@ -615,7 +895,11 @@
       "lon": 8.438711099999999,
       "url": "https://flatfox.ch/86273195/",
       "price": 1750,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 60,
+      "address": "Oberhausgässli",
+      "city": "Greppen"
     },
     {
       "id": 86272594,
@@ -623,7 +907,10 @@
       "lon": 8.5309451,
       "url": "https://flatfox.ch/86272594/",
       "price": 3150,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "address": "Rigistrasse 160",
+      "city": "Baar/Inwil"
     },
     {
       "id": 86272098,
@@ -631,7 +918,11 @@
       "lon": 8.368566699999999,
       "url": "https://flatfox.ch/86272098/",
       "price": 2610,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 100,
+      "address": "Auf Anfrage",
+      "city": "Auw"
     },
     {
       "id": 86272003,
@@ -639,7 +930,10 @@
       "lon": 8.64957396264209,
       "url": "https://flatfox.ch/86272003/",
       "price": 5000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 160,
+      "city": "Wädenswil"
     },
     {
       "id": 86271920,
@@ -647,7 +941,11 @@
       "lon": 8.4088116,
       "url": "https://flatfox.ch/86271920/",
       "price": 1900,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 65,
+      "address": "Kalchtarenstrasse 10",
+      "city": "Obfelden"
     },
     {
       "id": 86271892,
@@ -655,7 +953,11 @@
       "lon": 8.3709291,
       "url": "https://flatfox.ch/86271892/",
       "price": 2700,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 96,
+      "address": "Weinberg, 7",
+      "city": "Merenschwand"
     },
     {
       "id": 86243395,
@@ -663,7 +965,11 @@
       "lon": 8.6907974,
       "url": "https://flatfox.ch/86243395/",
       "price": 1915,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 67,
+      "address": "Dammstr. 25",
+      "city": "Männedorf"
     },
     {
       "id": 86270743,
@@ -671,7 +977,11 @@
       "lon": 8.4657667,
       "url": "https://flatfox.ch/86270743/",
       "price": 1380,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "surface": 30,
+      "address": "Rigiweg 2",
+      "city": "Rigi Kaltbad"
     },
     {
       "id": 86270713,
@@ -679,7 +989,11 @@
       "lon": 8.4657667,
       "url": "https://flatfox.ch/86270713/",
       "price": 2980,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 99,
+      "address": "Rigiweg 2",
+      "city": "Rigi Kaltbad"
     },
     {
       "id": 86270370,
@@ -687,7 +1001,11 @@
       "lon": 8.432099299999999,
       "url": "https://flatfox.ch/86270370/",
       "price": 2190,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 28,
+      "address": "Lorzenweidstrasse 105",
+      "city": "Hagendorn"
     },
     {
       "id": 86270181,
@@ -695,7 +1013,11 @@
       "lon": 8.4216672,
       "url": "https://flatfox.ch/86270181/",
       "price": 2327,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 89,
+      "address": "Chileweg 27",
+      "city": "Obfelden"
     },
     {
       "id": 86260617,
@@ -703,7 +1025,11 @@
       "lon": 8.4293035,
       "url": "https://flatfox.ch/86260617/",
       "price": 2920,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 94,
+      "address": "Buonaserstrasse 5",
+      "city": "Rotkreuz"
     },
     {
       "id": 86269921,
@@ -711,7 +1037,11 @@
       "lon": 8.4452091,
       "url": "https://flatfox.ch/86269921/",
       "price": 3014,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 99,
+      "address": "Obfelderstrasse 13",
+      "city": "Affoltern am Albis"
     },
     {
       "id": 86269307,
@@ -719,7 +1049,10 @@
       "lon": 8.696256599763293,
       "url": "https://flatfox.ch/86269307/",
       "price": 7500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 7.0,
+      "surface": 220,
+      "city": "Richterswil"
     },
     {
       "id": 86269172,
@@ -727,7 +1060,11 @@
       "lon": 8.353566899999999,
       "url": "https://flatfox.ch/86269172/",
       "price": 3500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 146,
+      "address": "Auf Anfrage",
+      "city": "Abtwil AG"
     },
     {
       "id": 86269022,
@@ -735,7 +1072,11 @@
       "lon": 8.609018899999999,
       "url": "https://flatfox.ch/86269022/",
       "price": 1850,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 50,
+      "address": "Mitteldorfstrasse 32",
+      "city": "Oberägeri"
     },
     {
       "id": 86264722,
@@ -743,7 +1084,10 @@
       "lon": 8.2938668,
       "url": "https://flatfox.ch/86264722/",
       "price": 1570,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "address": "Dammstrasse 23",
+      "city": "Hochdorf"
     },
     {
       "id": 86251414,
@@ -751,7 +1095,11 @@
       "lon": 8.5211478,
       "url": "https://flatfox.ch/86251414/",
       "price": 5800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 116,
+      "address": "Aegerisaumweg 8",
+      "city": "Zug"
     },
     {
       "id": 86268464,
@@ -759,7 +1107,11 @@
       "lon": 8.313036799999999,
       "url": "https://flatfox.ch/86268464/",
       "price": 1970,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 94,
+      "address": "Krebsbärenhalde 2",
+      "city": "Horw"
     },
     {
       "id": 86268387,
@@ -767,7 +1119,10 @@
       "lon": 8.519462899999999,
       "url": "https://flatfox.ch/86268387/",
       "price": 5800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "address": "Industriestrasse 31",
+      "city": "Zug"
     },
     {
       "id": 86231156,
@@ -775,7 +1130,11 @@
       "lon": 8.3568157,
       "url": "https://flatfox.ch/86231156/",
       "price": 1930,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 78,
+      "address": "Ebisquare-Str. 7c",
+      "city": "Ebikon"
     },
     {
       "id": 86266484,
@@ -783,7 +1142,11 @@
       "lon": 8.2656972,
       "url": "https://flatfox.ch/86266484/",
       "price": 2350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 120,
+      "address": "Alte Poststrasse 12A",
+      "city": "Schongau"
     },
     {
       "id": 86265518,
@@ -791,7 +1154,11 @@
       "lon": 8.6974907,
       "url": "https://flatfox.ch/86265518/",
       "price": 850,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "surface": 20,
+      "address": "Seewisenstrasse 18",
+      "city": "Egg b. Zürich"
     },
     {
       "id": 86264323,
@@ -799,7 +1166,11 @@
       "lon": 8.281269,
       "url": "https://flatfox.ch/86264323/",
       "price": 2950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 142,
+      "address": "Himmlerichstrasse 4",
+      "city": "Baldegg"
     },
     {
       "id": 86264295,
@@ -807,7 +1178,11 @@
       "lon": 8.599371,
       "url": "https://flatfox.ch/86264295/",
       "price": 6530,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 120,
+      "address": "Lutisbachweg",
+      "city": "Oberägeri"
     },
     {
       "id": 86264206,
@@ -815,7 +1190,11 @@
       "lon": 8.3151718,
       "url": "https://flatfox.ch/86264206/",
       "price": 2150,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 75,
+      "address": "Lindenfeldstrasse 31",
+      "city": "Eschenbach LU"
     },
     {
       "id": 86262661,
@@ -823,7 +1202,11 @@
       "lon": 8.3880048,
       "url": "https://flatfox.ch/86262661/",
       "price": 2500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 82,
+      "address": "Roggächerweg 7",
+      "city": "Mühlau"
     },
     {
       "id": 86262660,
@@ -831,7 +1214,11 @@
       "lon": 8.3880048,
       "url": "https://flatfox.ch/86262660/",
       "price": 2250,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 93,
+      "address": "Roggächerweg 7",
+      "city": "Mühlau"
     },
     {
       "id": 86262657,
@@ -839,7 +1226,11 @@
       "lon": 8.3880048,
       "url": "https://flatfox.ch/86262657/",
       "price": 3300,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 145,
+      "address": "Roggächerweg 7",
+      "city": "Mühlau"
     },
     {
       "id": 86262320,
@@ -847,7 +1238,10 @@
       "lon": 8.53147862072253,
       "url": "https://flatfox.ch/86262320/",
       "price": 2580,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 77,
+      "city": "Zug"
     },
     {
       "id": 86262117,
@@ -855,7 +1249,11 @@
       "lon": 8.526752799999999,
       "url": "https://flatfox.ch/86262117/",
       "price": 5950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 140,
+      "address": "Auf Anfrage",
+      "city": "Baar"
     },
     {
       "id": 86261930,
@@ -863,7 +1261,10 @@
       "lon": 8.573805412773833,
       "url": "https://flatfox.ch/86261930/",
       "price": 850,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "surface": 15,
+      "city": "Edlibach"
     },
     {
       "id": 86261925,
@@ -871,7 +1272,11 @@
       "lon": 8.4320557,
       "url": "https://flatfox.ch/86261925/",
       "price": 3200,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 110,
+      "address": "Haltikerstrasse 52",
+      "city": "Küssnacht am Rigi"
     },
     {
       "id": 86261715,
@@ -879,7 +1284,10 @@
       "lon": 8.547121796452238,
       "url": "https://flatfox.ch/86261715/",
       "price": 2500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 110,
+      "city": "Goldau"
     },
     {
       "id": 86261634,
@@ -887,7 +1295,11 @@
       "lon": 8.4049745,
       "url": "https://flatfox.ch/86261634/",
       "price": 2350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 104,
+      "address": "Alter Postweg 4",
+      "city": "Ottenbach"
     },
     {
       "id": 86261391,
@@ -895,7 +1307,10 @@
       "lon": 8.4539013,
       "url": "https://flatfox.ch/86261391/",
       "price": null,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "address": "Oberdorfstrasse 2",
+      "city": "Affoltern am Albis"
     },
     {
       "id": 86260164,
@@ -903,7 +1318,11 @@
       "lon": 8.460445100000001,
       "url": "https://flatfox.ch/86260164/",
       "price": 5800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 6.5,
+      "surface": 180,
+      "address": "Rossmattenweg 1",
+      "city": "Mettmenstetten"
     },
     {
       "id": 86260138,
@@ -911,7 +1330,11 @@
       "lon": 8.46164,
       "url": "https://flatfox.ch/86260138/",
       "price": 3850,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 114,
+      "address": "Ribetschi 3",
+      "city": "Immensee"
     },
     {
       "id": 86260064,
@@ -919,7 +1342,9 @@
       "lon": 8.526798640633666,
       "url": "https://flatfox.ch/86260064/",
       "price": 927,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "city": "Baar"
     },
     {
       "id": 86259888,
@@ -927,7 +1352,10 @@
       "lon": 8.25013749910178,
       "url": "https://flatfox.ch/86259888/",
       "price": 2940,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 140,
+      "city": "Luzern"
     },
     {
       "id": 86259651,
@@ -935,7 +1363,11 @@
       "lon": 8.2999913,
       "url": "https://flatfox.ch/86259651/",
       "price": 1736,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 82,
+      "address": "Lindenbergstrasse 2",
+      "city": "Hochdorf"
     },
     {
       "id": 86254685,
@@ -943,7 +1375,11 @@
       "lon": 8.3429945,
       "url": "https://flatfox.ch/86254685/",
       "price": 1495,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 53,
+      "address": "Luzernerstrasse 17h",
+      "city": "Muri AG"
     },
     {
       "id": 86258980,
@@ -951,7 +1387,11 @@
       "lon": 8.3195573,
       "url": "https://flatfox.ch/86258980/",
       "price": 2650,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 121,
+      "address": "Seetalstrasse 11",
+      "city": "Eschenbach LU"
     },
     {
       "id": 86258404,
@@ -959,7 +1399,11 @@
       "lon": 8.5988317,
       "url": "https://flatfox.ch/86258404/",
       "price": 2000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 50,
+      "address": "Wannenstrasse 15a",
+      "city": "Erlenbach ZH"
     },
     {
       "id": 86258043,
@@ -967,7 +1411,10 @@
       "lon": 8.366704538255286,
       "url": "https://flatfox.ch/86258043/",
       "price": 990,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 30,
+      "city": "Inwil"
     },
     {
       "id": 86258034,
@@ -975,7 +1422,11 @@
       "lon": 8.3344195,
       "url": "https://flatfox.ch/86258034/",
       "price": 990,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 30,
+      "address": "Mettlenstrasse 17",
+      "city": "Inwil"
     },
     {
       "id": 86257764,
@@ -983,7 +1434,9 @@
       "lon": 8.307942614100908,
       "url": "https://flatfox.ch/86257764/",
       "price": 1450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "city": "Horw"
     },
     {
       "id": 86257433,
@@ -991,7 +1444,11 @@
       "lon": 8.3940725,
       "url": "https://flatfox.ch/86257433/",
       "price": 2140,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 92,
+      "address": "Auf Anfrage",
+      "city": "Root"
     },
     {
       "id": 86256549,
@@ -999,7 +1456,10 @@
       "lon": 8.46304899023428,
       "url": "https://flatfox.ch/86256549/",
       "price": 2190,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 95,
+      "city": "Immensee"
     },
     {
       "id": 86256200,
@@ -1007,7 +1467,11 @@
       "lon": 8.6069111,
       "url": "https://flatfox.ch/86256200/",
       "price": 2650,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 82,
+      "address": "Johanna-Spyri-Strasse 2",
+      "city": "Hirzel"
     },
     {
       "id": 86255383,
@@ -1015,7 +1479,9 @@
       "lon": 8.431222566466623,
       "url": "https://flatfox.ch/86255383/",
       "price": 1500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "city": "Zwilikon"
     },
     {
       "id": 86255218,
@@ -1023,7 +1489,9 @@
       "lon": 8.431344134946086,
       "url": "https://flatfox.ch/86255218/",
       "price": 1500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "city": "Zwillikon"
     },
     {
       "id": 86254243,
@@ -1031,7 +1499,11 @@
       "lon": 8.4271707,
       "url": "https://flatfox.ch/86254243/",
       "price": 3950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 150,
+      "address": "Auf Anfrage",
+      "city": "Hünenberg"
     },
     {
       "id": 86255913,
@@ -1039,7 +1511,10 @@
       "lon": 8.550622289474553,
       "url": "https://flatfox.ch/86255913/",
       "price": 2159,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 84,
+      "city": "Gattikon"
     },
     {
       "id": 86252114,
@@ -1047,7 +1522,11 @@
       "lon": 8.3727093,
       "url": "https://flatfox.ch/86252114/",
       "price": 1995,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 65,
+      "address": "Breitfeldstr. 19",
+      "city": "Merenschwand"
     },
     {
       "id": 86251790,
@@ -1055,7 +1534,11 @@
       "lon": 8.3147242,
       "url": "https://flatfox.ch/86251790/",
       "price": 1320,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 40,
+      "address": "Zentralstrasse 36",
+      "city": "Boswil"
     },
     {
       "id": 86251650,
@@ -1063,7 +1546,11 @@
       "lon": 8.6959841,
       "url": "https://flatfox.ch/86251650/",
       "price": 1590,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 65,
+      "address": "In den Seewiesen 2a",
+      "city": "Egg b. Zürich"
     },
     {
       "id": 86249252,
@@ -1071,7 +1558,11 @@
       "lon": 8.6852401,
       "url": "https://flatfox.ch/86249252/",
       "price": 3690,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 147,
+      "address": "Kleindorfstrasse 109",
+      "city": "Uetikon am See"
     },
     {
       "id": 86250378,
@@ -1079,7 +1570,10 @@
       "lon": 8.696212557520433,
       "url": "https://flatfox.ch/86250378/",
       "price": 3690,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 113,
+      "city": "Richterswil"
     },
     {
       "id": 86173510,
@@ -1087,7 +1581,11 @@
       "lon": 8.685803199999999,
       "url": "https://flatfox.ch/86173510/",
       "price": 2480,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 62,
+      "address": "Im oberen Boden 8",
+      "city": "Männedorf"
     },
     {
       "id": 86249401,
@@ -1095,7 +1593,10 @@
       "lon": 8.366656774646605,
       "url": "https://flatfox.ch/86249401/",
       "price": 1800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "surface": 95,
+      "city": "Inwil"
     },
     {
       "id": 86249017,
@@ -1103,7 +1604,11 @@
       "lon": 8.5519765,
       "url": "https://flatfox.ch/86249017/",
       "price": 1420,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 48,
+      "address": "Parkstr. 28 26",
+      "city": "Goldau"
     },
     {
       "id": 86248967,
@@ -1111,7 +1616,11 @@
       "lon": 8.5283578,
       "url": "https://flatfox.ch/86248967/",
       "price": 3290,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 162,
+      "address": "Mühlegasse 12c",
+      "city": "Baar"
     },
     {
       "id": 86248940,
@@ -1119,7 +1628,11 @@
       "lon": 8.3942817,
       "url": "https://flatfox.ch/86248940/",
       "price": 2810,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 113,
+      "address": "Lettenstrasse",
+      "city": "SINS"
     },
     {
       "id": 86248849,
@@ -1127,7 +1640,11 @@
       "lon": 8.308271999999999,
       "url": "https://flatfox.ch/86248849/",
       "price": 1790,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 85,
+      "address": "Emmen",
+      "city": "Emmen"
     },
     {
       "id": 86247815,
@@ -1135,7 +1652,11 @@
       "lon": 8.4834809,
       "url": "https://flatfox.ch/86247815/",
       "price": 4750,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 126,
+      "address": "Seestrasse",
+      "city": "Vitznau"
     },
     {
       "id": 86247310,
@@ -1143,7 +1664,10 @@
       "lon": 8.649469578924469,
       "url": "https://flatfox.ch/86247310/",
       "price": 1380,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 37,
+      "city": "Wädenswil"
     },
     {
       "id": 86246838,
@@ -1151,7 +1675,10 @@
       "lon": 8.630147068734347,
       "url": "https://flatfox.ch/86246838/",
       "price": 1340,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 40,
+      "city": "Seewen SZ"
     },
     {
       "id": 86245898,
@@ -1159,7 +1686,11 @@
       "lon": 8.4630928,
       "url": "https://flatfox.ch/86245898/",
       "price": 1220,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.0,
+      "surface": 55,
+      "address": "Immostrasse 2",
+      "city": "Immensee"
     },
     {
       "id": 86245561,
@@ -1167,7 +1698,10 @@
       "lon": 8.253554307321421,
       "url": "https://flatfox.ch/86245561/",
       "price": 1800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 80,
+      "city": "Retschwil"
     },
     {
       "id": 86242964,
@@ -1175,7 +1709,10 @@
       "lon": 8.463715436793878,
       "url": "https://flatfox.ch/86242964/",
       "price": 3050,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "surface": 110,
+      "city": "Knonau"
     },
     {
       "id": 86242708,
@@ -1183,7 +1720,11 @@
       "lon": 8.6286766,
       "url": "https://flatfox.ch/86242708/",
       "price": 1740,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 78,
+      "address": "Aegeristrasse 13",
+      "city": "Sattel"
     },
     {
       "id": 86242631,
@@ -1191,7 +1732,11 @@
       "lon": 8.272598,
       "url": "https://flatfox.ch/86242631/",
       "price": 2150,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 100,
+      "address": "Friedauweg 6",
+      "city": "Rothenburg"
     },
     {
       "id": 86240540,
@@ -1199,7 +1744,11 @@
       "lon": 8.5072741,
       "url": "https://flatfox.ch/86240540/",
       "price": 2280,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 60,
+      "address": "Angelgasse 2a",
+      "city": "Oberwil bei Zug"
     },
     {
       "id": 86238052,
@@ -1207,7 +1756,11 @@
       "lon": 8.600215799999999,
       "url": "https://flatfox.ch/86238052/",
       "price": 5950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 154,
+      "address": "Rubisacherrain 18A",
+      "city": "Brunnen"
     },
     {
       "id": 86237607,
@@ -1215,7 +1768,11 @@
       "lon": 8.464853999999999,
       "url": "https://flatfox.ch/86237607/",
       "price": 3350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 122,
+      "address": "Albisstrasse 28",
+      "city": "Mettmenstetten"
     },
     {
       "id": 86236564,
@@ -1223,7 +1780,11 @@
       "lon": 8.464326699999999,
       "url": "https://flatfox.ch/86236564/",
       "price": 2660,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 160,
+      "address": "Albisstrasse 8",
+      "city": "Mettmenstetten"
     },
     {
       "id": 86161734,
@@ -1231,7 +1792,11 @@
       "lon": 8.304115099999999,
       "url": "https://flatfox.ch/86161734/",
       "price": 2780,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "surface": 105,
+      "address": "Ziegeleiweg 1",
+      "city": "Kriens"
     },
     {
       "id": 86232602,
@@ -1239,7 +1804,10 @@
       "lon": 8.531431953499759,
       "url": "https://flatfox.ch/86232602/",
       "price": 13100,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 189,
+      "city": "Zug"
     },
     {
       "id": 86230161,
@@ -1247,7 +1815,11 @@
       "lon": 8.6625676,
       "url": "https://flatfox.ch/86230161/",
       "price": 2785,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 113,
+      "address": "Alte Landstr. 161",
+      "city": "Meilen"
     },
     {
       "id": 86229060,
@@ -1255,7 +1827,10 @@
       "lon": 8.341501754595948,
       "url": "https://flatfox.ch/86229060/",
       "price": 3000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 6.0,
+      "surface": 140,
+      "city": "Muri AG"
     },
     {
       "id": 86228414,
@@ -1263,7 +1838,10 @@
       "lon": 8.6188367,
       "url": "https://flatfox.ch/86228414/",
       "price": 2190,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "address": "Wängirain 11",
+      "city": "Herrliberg"
     },
     {
       "id": 85895452,
@@ -1271,7 +1849,11 @@
       "lon": 8.690632299999999,
       "url": "https://flatfox.ch/85895452/",
       "price": 2599,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 90,
+      "address": "Rainstrasse 6",
+      "city": "Egg b. Zürich"
     },
     {
       "id": 86227206,
@@ -1279,7 +1861,9 @@
       "lon": 8.394103286152918,
       "url": "https://flatfox.ch/86227206/",
       "price": 2990,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "city": "Root"
     },
     {
       "id": 86225345,
@@ -1287,7 +1871,11 @@
       "lon": 8.412224199999999,
       "url": "https://flatfox.ch/86225345/",
       "price": 3980,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 122,
+      "address": "Matten 14",
+      "city": "Hünenberg"
     },
     {
       "id": 86223453,
@@ -1295,7 +1883,11 @@
       "lon": 8.465611899999999,
       "url": "https://flatfox.ch/86223453/",
       "price": 3050,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 110,
+      "address": "Chamstrasse 15",
+      "city": "Knonau"
     },
     {
       "id": 86221262,
@@ -1303,7 +1895,11 @@
       "lon": 8.382574,
       "url": "https://flatfox.ch/86221262/",
       "price": 2690,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 106,
+      "address": "Mättelistrasse 1",
+      "city": "Meggen"
     },
     {
       "id": 86220807,
@@ -1311,7 +1907,10 @@
       "lon": 8.30824720489148,
       "url": "https://flatfox.ch/86220807/",
       "price": 1800,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 68,
+      "city": "Emmen"
     },
     {
       "id": 86219374,
@@ -1319,7 +1918,11 @@
       "lon": 8.458762,
       "url": "https://flatfox.ch/86219374/",
       "price": 2450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 140,
+      "address": "Auf Anfrage",
+      "city": "Weggis"
     },
     {
       "id": 86218949,
@@ -1327,7 +1930,11 @@
       "lon": 8.669262,
       "url": "https://flatfox.ch/86218949/",
       "price": 3000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 134,
+      "address": "Schoosweidstrasse 13",
+      "city": "Rothenthurm"
     },
     {
       "id": 86217885,
@@ -1335,7 +1942,11 @@
       "lon": 8.2586694,
       "url": "https://flatfox.ch/86217885/",
       "price": 3950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 6.5,
+      "surface": 140,
+      "address": "Auf Anfrage",
+      "city": "Hitzkirch"
     },
     {
       "id": 86217793,
@@ -1343,7 +1954,11 @@
       "lon": 8.64062,
       "url": "https://flatfox.ch/86217793/",
       "price": 5580,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 218,
+      "address": "Auf Anfrage",
+      "city": "Morgarten"
     },
     {
       "id": 86217130,
@@ -1351,7 +1966,10 @@
       "lon": 8.524953265817448,
       "url": "https://flatfox.ch/86217130/",
       "price": 2620,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 110,
+      "city": "Hausen am Albis"
     },
     {
       "id": 86216419,
@@ -1359,7 +1977,11 @@
       "lon": 8.4288083,
       "url": "https://flatfox.ch/86216419/",
       "price": 3300,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 96,
+      "address": "Birkenmatt 25",
+      "city": "Rotkreuz"
     },
     {
       "id": 86215604,
@@ -1367,7 +1989,9 @@
       "lon": 8.58146041313928,
       "url": "https://flatfox.ch/86215604/",
       "price": 1880,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "city": "neuheim"
     },
     {
       "id": 86213057,
@@ -1375,7 +1999,11 @@
       "lon": 8.6169619,
       "url": "https://flatfox.ch/86213057/",
       "price": 5950,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 160,
+      "address": "Langackerstrasse 128",
+      "city": "Herrliberg"
     },
     {
       "id": 86212845,
@@ -1383,7 +2011,11 @@
       "lon": 8.5833285,
       "url": "https://flatfox.ch/86212845/",
       "price": 1400,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 80,
+      "address": "Goldauerstrasse 1, 6416 Steinerberg",
+      "city": "Steinerberg"
     },
     {
       "id": 86208430,
@@ -1391,7 +2023,11 @@
       "lon": 8.565803599999999,
       "url": "https://flatfox.ch/86208430/",
       "price": 1380,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "surface": 15,
+      "address": "Zügerstrasse 142",
+      "city": "Ünterägeri"
     },
     {
       "id": 86207896,
@@ -1399,7 +2035,10 @@
       "lon": 8.5504593,
       "url": "https://flatfox.ch/86207896/",
       "price": 2450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "address": "Obstgartenstrasse 18",
+      "city": "Gattikon"
     },
     {
       "id": 86161249,
@@ -1407,7 +2046,11 @@
       "lon": 8.3664465,
       "url": "https://flatfox.ch/86161249/",
       "price": 2500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 116,
+      "address": "Steinistrasse 9",
+      "city": "Birri-Aristau"
     },
     {
       "id": 86164070,
@@ -1415,7 +2058,11 @@
       "lon": 8.3247005,
       "url": "https://flatfox.ch/86164070/",
       "price": 1720,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 94,
+      "address": "Blattenhalde 4",
+      "city": "Eschenbach LU"
     },
     {
       "id": 86193462,
@@ -1423,7 +2070,10 @@
       "lon": 8.3464817,
       "url": "https://flatfox.ch/86193462/",
       "price": 3000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 7.5,
+      "address": "Unterdorf 8",
+      "city": "Beinwil (Freiamt)"
     },
     {
       "id": 86191853,
@@ -1431,7 +2081,10 @@
       "lon": 8.301472,
       "url": "https://flatfox.ch/86191853/",
       "price": 1450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "address": "Spitzberglistrasse",
+      "city": "Horw"
     },
     {
       "id": 86191690,
@@ -1439,7 +2092,11 @@
       "lon": 8.332409,
       "url": "https://flatfox.ch/86191690/",
       "price": 2900,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 121,
+      "address": "Sagenhofstrasse 57",
+      "city": "Ebikon"
     },
     {
       "id": 86189505,
@@ -1447,7 +2104,10 @@
       "lon": 8.251587299999999,
       "url": "https://flatfox.ch/86189505/",
       "price": 2200,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.0,
+      "address": "Thorenbergstrasse 15",
+      "city": "Luzern"
     },
     {
       "id": 86137006,
@@ -1455,7 +2115,11 @@
       "lon": 8.5319099,
       "url": "https://flatfox.ch/86137006/",
       "price": 1914,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 84,
+      "address": "Rifferswilerstr. 4",
+      "city": "Hausen am Albis"
     },
     {
       "id": 86182339,
@@ -1463,7 +2127,11 @@
       "lon": 8.5833285,
       "url": "https://flatfox.ch/86182339/",
       "price": 1400,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.0,
+      "surface": 80,
+      "address": "Goldauerstraße 1",
+      "city": "Steinerberg"
     },
     {
       "id": 86173343,
@@ -1471,7 +2139,10 @@
       "lon": 8.4455794,
       "url": "https://flatfox.ch/86173343/",
       "price": 2530,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "address": "Unterdorfstrasse 4",
+      "city": "Hedingen"
     },
     {
       "id": 86169988,
@@ -1479,7 +2150,10 @@
       "lon": 8.515748100000001,
       "url": "https://flatfox.ch/86169988/",
       "price": 5095,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.0,
+      "address": "Neugasse 21",
+      "city": "Zug"
     },
     {
       "id": 86161915,
@@ -1487,7 +2161,11 @@
       "lon": 8.4319364,
       "url": "https://flatfox.ch/86161915/",
       "price": 3100,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 120,
+      "address": "Gütschweg 6",
+      "city": "Merlischachen"
     },
     {
       "id": 86160453,
@@ -1495,7 +2173,11 @@
       "lon": 8.3858566,
       "url": "https://flatfox.ch/86160453/",
       "price": 3290,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 120,
+      "address": "Ledipark 20",
+      "city": "Root"
     },
     {
       "id": 86011417,
@@ -1503,7 +2185,11 @@
       "lon": 8.6794228,
       "url": "https://flatfox.ch/86011417/",
       "price": 3450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 5.5,
+      "surface": 156,
+      "address": "Bärenweidstrasse 10",
+      "city": "Samstagern"
     },
     {
       "id": 86146063,
@@ -1511,7 +2197,11 @@
       "lon": 8.4032803,
       "url": "https://flatfox.ch/86146063/",
       "price": 3000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 115,
+      "address": "Hagnau 12",
+      "city": "Merenschwand"
     },
     {
       "id": 86103114,
@@ -1519,7 +2209,10 @@
       "lon": 8.256790281261862,
       "url": "https://flatfox.ch/86103114/",
       "price": 3500,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 115,
+      "city": "Rothenburg"
     },
     {
       "id": 86097614,
@@ -1527,7 +2220,11 @@
       "lon": 8.446156199999999,
       "url": "https://flatfox.ch/86097614/",
       "price": 3000,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 70,
+      "address": "Chaletdörfli 3",
+      "city": "Meierskappel"
     },
     {
       "id": 86069796,
@@ -1535,7 +2232,10 @@
       "lon": 8.543810705192506,
       "url": "https://flatfox.ch/86069796/",
       "price": 1450,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 55,
+      "city": "Arth"
     },
     {
       "id": 86065773,
@@ -1543,7 +2243,10 @@
       "lon": 8.28676361056186,
       "url": "https://flatfox.ch/86065773/",
       "price": 2400,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 120,
+      "city": "Gelfingen"
     },
     {
       "id": 86041083,
@@ -1551,7 +2254,10 @@
       "lon": 8.524876341664749,
       "url": "https://flatfox.ch/86041083/",
       "price": 2750,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 156,
+      "city": "Hausen am Albis"
     },
     {
       "id": 86034934,
@@ -1559,7 +2265,10 @@
       "lon": 8.443044898114653,
       "url": "https://flatfox.ch/86034934/",
       "price": 2350,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 65,
+      "city": "Rotkreuz"
     },
     {
       "id": 86030178,
@@ -1567,7 +2276,11 @@
       "lon": 8.442560499999999,
       "url": "https://flatfox.ch/86030178/",
       "price": 2650,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 60,
+      "address": "Siegwartstr. 2",
+      "city": "Küssnacht am Rigi"
     },
     {
       "id": 85903716,
@@ -1575,7 +2288,11 @@
       "lon": 8.590831699999999,
       "url": "https://flatfox.ch/85903716/",
       "price": 1990,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 32,
+      "address": "Neudorfstrasse 5",
+      "city": "Menzingen"
     },
     {
       "id": 85977467,
@@ -1583,7 +2300,11 @@
       "lon": 8.4934487,
       "url": "https://flatfox.ch/85977467/",
       "price": 4840,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 4.5,
+      "surface": 142,
+      "address": "Allmendstrasse 56",
+      "city": "Aeugst am Albis"
     },
     {
       "id": 85977464,
@@ -1591,7 +2312,11 @@
       "lon": 8.4932246,
       "url": "https://flatfox.ch/85977464/",
       "price": 3980,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 3.5,
+      "surface": 102,
+      "address": "Allmendstrasse 50",
+      "city": "Aeugst am Albis"
     },
     {
       "id": 85899485,
@@ -1599,7 +2324,11 @@
       "lon": 8.564015699999999,
       "url": "https://flatfox.ch/85899485/",
       "price": 2540,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 2.5,
+      "surface": 57,
+      "address": "Zugerstrasse 173",
+      "city": "Unterägeri"
     },
     {
       "id": 85933289,
@@ -1607,7 +2336,11 @@
       "lon": 8.5251766,
       "url": "https://flatfox.ch/85933289/",
       "price": 1930,
-      "price_unit": "monthly"
+      "price_unit": "monthly",
+      "rooms": 1.5,
+      "surface": 48,
+      "address": "Kappelerhof 5",
+      "city": "Kappel am Albis"
     }
   ]
 }

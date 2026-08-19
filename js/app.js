@@ -34,7 +34,6 @@ function setupControls() {
   maxRentSlider.addEventListener("input", () => {
     maxRentLabel.textContent = `CHF ${parseInt(maxRentSlider.value).toLocaleString()}`;
     refreshMunicipalityStyles();
-    refreshFlatfoxListings();
   });
 
   const maxTimeSlider = document.getElementById("maxTime");
@@ -42,6 +41,20 @@ function setupControls() {
   maxTimeSlider.addEventListener("input", () => {
     maxTimeLabel.textContent = `${maxTimeSlider.value} min`;
     refreshMunicipalityStyles();
+  });
+
+  const maxListingPriceSlider = document.getElementById("maxListingPrice");
+  const maxListingPriceLabel = document.getElementById("maxListingPrice-value");
+  maxListingPriceSlider.addEventListener("input", () => {
+    maxListingPriceLabel.textContent = `CHF ${parseInt(maxListingPriceSlider.value).toLocaleString()}`;
+    refreshFlatfoxListings();
+  });
+
+  const minRoomsSlider = document.getElementById("minRooms");
+  const minRoomsLabel = document.getElementById("minRooms-value");
+  minRoomsSlider.addEventListener("input", () => {
+    minRoomsLabel.textContent = minRoomsSlider.value;
+    refreshFlatfoxListings();
   });
 
   // Route profile selector

@@ -461,12 +461,15 @@ function renderFlatfoxListings() {
   if (flatfoxLayer) map.removeLayer(flatfoxLayer);
   if (!flatfoxListings || flatfoxListings.length === 0) return;
 
-  const maxRent = getFilterValue("maxRent");
+  const maxPrice = getFilterValue("maxListingPrice");
+  const minRooms = getFilterFloat("minRooms");
   const group = L.layerGroup();
+  let shown = 0;
 
   for (const listing of flatfoxListings) {
     if (listing.price === null) continue;
-    if (listing.price > maxRent) continue;
+    if (listing.price > maxPrice) continue;
+    if (minRooms > 1 && (listing.rooms == null || listing.rooms < minRooms)) continue;
 
     const colour = getRentColour(listing.price);
 
@@ -485,7 +488,9 @@ function renderFlatfoxListings() {
       L.popup().setLatLng([listing.lat, listing.lon]).setContent(content).openOn(map);
     });
 
-    marker.bindTooltip(`CHF ${listing.price.toLocaleString()}/mo`, {
+    const tipParts = [`CHF ${listing.price.toLocaleString()}/mo`];
+    if (listing.rooms != null) tipParts.push(`${listing.rooms} rm`);
+    marker.bindTooltip(tipParts.join(" · "), {
       direction: "top",
       offset: [0, -6],
     });
@@ -503,11 +508,18 @@ function buildListingPopup(listing) {
   let html = `<h3>CHF ${listing.price.toLocaleString()}/month</h3>`;
   html += `<dl class="popup-stats">`;
 
-  const municipality = findNearestMunicipality(listing.lat, listing.lon);
-  if (municipality) {
-    html += `<dt>Area</dt><dd>${municipality}</dd>`;
+  if (listing.rooms != null) {
+    html += `<dt>Rooms</dt><dd>${listing.rooms}</dd>`;
+  }
+  if (listing.surface != null) {
+    html += `<dt>Area</dt><dd>${listing.surface} m&sup2;</dd>`;
+  }
+  if (listing.address || listing.city) {
+    const addr = [listing.address, listing.city].filter(Boolean).join(", ");
+    html += `<dt>Address</dt><dd>${addr}</dd>`;
   }
 
+  const municipality = findNearestMunicipality(listing.lat, listing.lon);
   const dist = estimateCyclingDistance(listing.lat, listing.lon);
   const centre = municipality ? MUNICIPALITY_CENTRES[municipality] : null;
   const elevGain = centre ? Math.abs((centre.elevation || 425) - 425) : 0;
@@ -538,6 +550,11 @@ function routeFromPoint(lat, lon) {
 function getFilterValue(id) {
   const el = document.getElementById(id);
   return el ? parseInt(el.value, 10) : Infinity;
+}
+
+function getFilterFloat(id) {
+  const el = document.getElementById(id);
+  return el ? parseFloat(el.value) : 0;
 }
 
 function showLoading(msg) {

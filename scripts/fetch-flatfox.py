@@ -1,25 +1,26 @@
 #!/usr/bin/env python3
 """
-Fetch current rental listings from the Flatfox public API (pin endpoint)
+Fetch current rental listings from the Flatfox public API (pin endpoint),
+enrich each with room/address details from the public-listing endpoint,
 and save as JSON in data/.
 
 Usage:
     python scripts/fetch-flatfox.py
-    python scripts/fetch-flatfox.py --min-rooms 2 --max-rooms 3.5
 """
 
-import argparse
 import json
 import sys
+import time
 import urllib.request
 import urllib.parse
 import urllib.error
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
 FLATFOX_PIN_URL = "https://flatfox.ch/api/v1/pin/"
+FLATFOX_DETAIL_URL = "https://flatfox.ch/api/v1/public-listing/"
 
-# Bounding box covering the map area (~20km around Zug)
 BBOX = {
     "north": 47.30,
     "south": 47.00,
@@ -27,10 +28,15 @@ BBOX = {
     "west": 8.25,
 }
 
+BATCH_SIZE = 10
+BATCH_DELAY = 0.5
+MAX_RETRIES = 3
+INITIAL_BACKOFF = 1.0
+
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
-def fetch_listings(min_rooms=None, max_rooms=None, min_price=None, max_price=None):
+def fetch_pins():
     params = {
         "north": BBOX["north"],
         "south": BBOX["south"],
@@ -41,17 +47,8 @@ def fetch_listings(min_rooms=None, max_rooms=None, min_price=None, max_price=Non
         "count": 500,
     }
 
-    if min_rooms is not None:
-        params["min_rooms"] = min_rooms
-    if max_rooms is not None:
-        params["max_rooms"] = max_rooms
-    if min_price is not None:
-        params["min_price"] = min_price
-    if max_price is not None:
-        params["max_price"] = max_price
-
     url = FLATFOX_PIN_URL + "?" + urllib.parse.urlencode(params)
-    print(f"Fetching listings from Flatfox...")
+    print(f"Fetching pins from Flatfox...")
     print(f"  URL: {url}")
 
     req = urllib.request.Request(url)
@@ -68,13 +65,63 @@ def fetch_listings(min_rooms=None, max_rooms=None, min_price=None, max_price=Non
         print(f"  Connection error: {e}")
         sys.exit(1)
 
-    print(f"  Got {len(data)} listings")
+    print(f"  Got {len(data)} pins")
     return data
 
 
-def transform_listings(raw_listings):
+def fetch_detail(pk):
+    url = f"{FLATFOX_DETAIL_URL}{pk}/"
+    for attempt in range(MAX_RETRIES):
+        try:
+            req = urllib.request.Request(url)
+            req.add_header("User-Agent", "ZugCommutePlanner/1.0")
+            req.add_header("Accept", "application/json")
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            return {
+                "rooms": data.get("number_of_rooms"),
+                "surface": data.get("surface_living"),
+                "address": data.get("street"),
+                "city": data.get("city"),
+            }
+        except urllib.error.HTTPError as e:
+            if e.code == 429 or e.code >= 500:
+                wait = INITIAL_BACKOFF * (2 ** attempt)
+                print(f"    Rate limited/server error for {pk} (HTTP {e.code}), retrying in {wait}s...")
+                time.sleep(wait)
+                continue
+            print(f"    Failed to fetch detail for {pk}: HTTP {e.code}")
+            return None
+        except Exception as e:
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(INITIAL_BACKOFF * (2 ** attempt))
+                continue
+            print(f"    Failed to fetch detail for {pk}: {e}")
+            return None
+    return None
+
+
+def fetch_details_batched(pks):
+    results = {}
+    total = len(pks)
+    for i in range(0, total, BATCH_SIZE):
+        batch = pks[i : i + BATCH_SIZE]
+        batch_num = i // BATCH_SIZE + 1
+        total_batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
+        print(f"  Fetching details batch {batch_num}/{total_batches} ({len(batch)} listings)...")
+        with ThreadPoolExecutor(max_workers=BATCH_SIZE) as pool:
+            futures = {pool.submit(fetch_detail, pk): pk for pk in batch}
+            for future in as_completed(futures):
+                pk = futures[future]
+                results[pk] = future.result()
+        if i + BATCH_SIZE < total:
+            time.sleep(BATCH_DELAY)
+    return results
+
+
+def transform_listings(raw_pins, details):
     listings = []
-    for pin in raw_listings:
+    for pin in raw_pins:
         lat = pin.get("latitude")
         lon = pin.get("longitude")
         pk = pin.get("pk")
@@ -98,8 +145,23 @@ def transform_listings(raw_listings):
         else:
             listing["price"] = None
 
-        price_unit = pin.get("price_unit", "")
-        listing["price_unit"] = price_unit
+        listing["price_unit"] = pin.get("price_unit", "")
+
+        detail = details.get(pk)
+        if detail:
+            rooms = detail.get("rooms")
+            if rooms is not None:
+                try:
+                    listing["rooms"] = float(rooms)
+                except (ValueError, TypeError):
+                    pass
+            surface = detail.get("surface")
+            if surface is not None:
+                listing["surface"] = surface
+            if detail.get("address"):
+                listing["address"] = detail["address"]
+            if detail.get("city"):
+                listing["city"] = detail["city"]
 
         listings.append(listing)
 
@@ -107,35 +169,35 @@ def transform_listings(raw_listings):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch Flatfox rental listings")
-    parser.add_argument("--min-rooms", type=float, help="Minimum number of rooms")
-    parser.add_argument("--max-rooms", type=float, help="Maximum number of rooms")
-    parser.add_argument("--min-price", type=int, help="Minimum monthly rent (CHF)")
-    parser.add_argument("--max-price", type=int, help="Maximum monthly rent (CHF)")
-    args = parser.parse_args()
-
     print("=" * 60)
     print("Zug Commute Map — Flatfox Listings Fetcher")
     print("=" * 60)
 
-    raw = fetch_listings(
-        min_rooms=args.min_rooms,
-        max_rooms=args.max_rooms,
-        min_price=args.min_price,
-        max_price=args.max_price,
-    )
+    raw = fetch_pins()
+    pks = [p["pk"] for p in raw if p.get("pk") is not None]
 
-    listings = transform_listings(raw)
+    print(f"\nEnriching {len(pks)} listings with room/address details...")
+    details = fetch_details_batched(pks)
+    enriched = sum(1 for v in details.values() if v is not None)
+    print(f"  Successfully enriched {enriched}/{len(pks)} listings")
+
+    listings = transform_listings(raw, details)
     with_price = [l for l in listings if l["price"] is not None]
-    print(f"  {len(with_price)} listings have a price")
+    with_rooms = [l for l in listings if l.get("rooms") is not None]
+    print(f"\n  {len(with_price)} listings have a price")
+    print(f"  {len(with_rooms)} listings have room count")
 
     if with_price:
         prices = [l["price"] for l in with_price]
         print(f"  Price range: CHF {min(prices)} – {max(prices)}/month")
 
+    if with_rooms:
+        rooms = sorted(set(l["rooms"] for l in with_rooms))
+        print(f"  Room counts: {', '.join(str(r) for r in rooms)}")
+
     output = {
         "fetchedAt": datetime.now(timezone.utc).isoformat(),
-        "source": "Flatfox public API (pin endpoint)",
+        "source": "Flatfox public API (pin + public-listing endpoints)",
         "bbox": BBOX,
         "count": len(listings),
         "listings": listings,
@@ -147,7 +209,6 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\nWrote {len(listings)} listings to {out_path}")
-    print("Run this script again to refresh with current listings.")
 
 
 if __name__ == "__main__":
