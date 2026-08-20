@@ -107,7 +107,12 @@ export class ZugsplorationStack extends cdk.Stack {
     flatfoxLambda.addToRolePolicy(
       new iam.PolicyStatement({
         actions: ["lambda:InvokeFunction"],
-        resources: [flatfoxLambda.functionArn],
+        resources: [
+          cdk.Arn.format(
+            { service: "lambda", resource: "function", resourceName: "*" },
+            this
+          ),
+        ],
       })
     );
 
