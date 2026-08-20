@@ -166,6 +166,18 @@ export class ZugsplorationStack extends cdk.Stack {
         ],
       },
       additionalBehaviors: {
+        "/data/flatfox-listings.json": {
+          origin: origins.S3BucketOrigin.withOriginAccessControl(siteBucket),
+          viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+          compress: true,
+          cachePolicy: cloudfront.CachePolicy.CACHING_DISABLED,
+          edgeLambdas: [
+            {
+              functionVersion: authEdgeFunction.currentVersion,
+              eventType: cloudfront.LambdaEdgeEventType.VIEWER_REQUEST,
+            },
+          ],
+        },
         "/api/*": {
           origin: apiOrigin,
           viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
