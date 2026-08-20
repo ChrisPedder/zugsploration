@@ -67,13 +67,28 @@ async function loadFlatfoxListings() {
   return flatfoxListings;
 }
 
-async function refreshFlatfoxFromAPI() {
+async function refreshFlatfoxFromAPI(onStatus) {
+  const currentResp = await fetch("data/flatfox-listings.json");
+  const currentData = await currentResp.json();
+  const previousTimestamp = currentData.fetchedAt;
+
   const resp = await fetch("/api/flatfox");
   if (!resp.ok) throw new Error(`Flatfox API returned ${resp.status}`);
-  const data = await resp.json();
-  if (data.error) throw new Error(data.error);
-  flatfoxListings = data.listings || [];
-  return flatfoxListings;
+
+  if (onStatus) onStatus("Scraping in progress...");
+
+  for (let i = 0; i < 120; i++) {
+    await new Promise(r => setTimeout(r, 3000));
+    const pollResp = await fetch("data/flatfox-listings.json?t=" + Date.now());
+    const pollData = await pollResp.json();
+    if (pollData.fetchedAt !== previousTimestamp) {
+      flatfoxListings = pollData.listings || [];
+      return flatfoxListings;
+    }
+    if (onStatus) onStatus(`Scraping in progress... (${(i + 1) * 3}s)`);
+  }
+
+  throw new Error("Scrape timed out — try reloading the page in a minute");
 }
 
 function getRentalInfo(municipalityName) {

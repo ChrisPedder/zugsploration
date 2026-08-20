@@ -98,7 +98,18 @@ export class ZugsplorationStack extends cdk.Stack {
       code: lambda.Code.fromAsset(path.join(__dirname, "../lambda/flatfox")),
       timeout: cdk.Duration.seconds(300),
       memorySize: 256,
+      environment: {
+        SITE_BUCKET: siteBucket.bucketName,
+      },
     });
+
+    siteBucket.grantReadWrite(flatfoxLambda);
+    flatfoxLambda.addToRolePolicy(
+      new iam.PolicyStatement({
+        actions: ["lambda:InvokeFunction"],
+        resources: [flatfoxLambda.functionArn],
+      })
+    );
 
     // --- API Gateway ---
     const httpApi = new apigatewayv2.HttpApi(this, "FlatfoxApi", {
@@ -170,6 +181,17 @@ export class ZugsplorationStack extends cdk.Stack {
       defaultRootObject: "index.html",
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
     });
+
+    // Wire up distribution ID now that it exists
+    flatfoxLambda.addEnvironment("DISTRIBUTION_ID", distribution.distributionId);
+    flatfoxLambda.addToRolePolicy(
+      new iam.PolicyStatement({
+        actions: ["cloudfront:CreateInvalidation"],
+        resources: [
+          `arn:aws:cloudfront::${this.account}:distribution/${distribution.distributionId}`,
+        ],
+      })
+    );
 
     // --- Deploy static site ---
     new s3deploy.BucketDeployment(this, "DeploySite", {

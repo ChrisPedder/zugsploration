@@ -1,8 +1,12 @@
 import json
+import os
 import time
 import urllib.request
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
+
+import boto3
 
 FLATFOX_PIN_URL = "https://flatfox.ch/api/v1/pin/"
 FLATFOX_DETAIL_URL = "https://flatfox.ch/api/v1/public-listing/"
@@ -140,61 +144,100 @@ def fetch_all_pins():
     return all_pins
 
 
-def handler(event, context):
-    try:
-        pins = fetch_all_pins()
+def do_scrape():
+    pins = fetch_all_pins()
+    details = fetch_details_batched([p["pk"] for p in pins])
 
-        details = fetch_details_batched([p["pk"] for p in pins])
+    listings = []
+    for pin in pins:
+        listing = {
+            "id": pin["pk"],
+            "lat": pin["lat"],
+            "lon": pin["lon"],
+            "url": f"https://flatfox.ch/{pin['pk']}/",
+            "price_unit": pin["price_unit"],
+        }
 
-        listings = []
-        for pin in pins:
-            listing = {
-                "id": pin["pk"],
-                "lat": pin["lat"],
-                "lon": pin["lon"],
-                "url": f"https://flatfox.ch/{pin['pk']}/",
-                "price_unit": pin["price_unit"],
-            }
-
-            price = pin["price"]
-            if price is not None:
-                try:
-                    listing["price"] = int(float(price))
-                except (ValueError, TypeError):
-                    listing["price"] = None
-            else:
+        price = pin["price"]
+        if price is not None:
+            try:
+                listing["price"] = int(float(price))
+            except (ValueError, TypeError):
                 listing["price"] = None
+        else:
+            listing["price"] = None
 
-            detail = details.get(pin["pk"])
-            if detail:
-                rooms = detail.get("rooms")
-                if rooms is not None:
-                    try:
-                        listing["rooms"] = float(rooms)
-                    except (ValueError, TypeError):
-                        pass
-                surface = detail.get("surface")
-                if surface is not None:
-                    listing["surface"] = surface
-                if detail.get("address"):
-                    listing["address"] = detail["address"]
-                if detail.get("city"):
-                    listing["city"] = detail["city"]
+        detail = details.get(pin["pk"])
+        if detail:
+            rooms = detail.get("rooms")
+            if rooms is not None:
+                try:
+                    listing["rooms"] = float(rooms)
+                except (ValueError, TypeError):
+                    pass
+            surface = detail.get("surface")
+            if surface is not None:
+                listing["surface"] = surface
+            if detail.get("address"):
+                listing["address"] = detail["address"]
+            if detail.get("city"):
+                listing["city"] = detail["city"]
 
-            listings.append(listing)
+        listings.append(listing)
 
+    return listings
+
+
+def handler(event, context):
+    is_async = event.get("async_scrape", False)
+
+    if is_async:
+        try:
+            listings = do_scrape()
+            output = {
+                "fetchedAt": datetime.now(timezone.utc).isoformat(),
+                "source": "Flatfox public API (pin + public-listing endpoints)",
+                "bbox": BBOX,
+                "count": len(listings),
+                "listings": listings,
+            }
+            s3 = boto3.client("s3")
+            s3.put_object(
+                Bucket=os.environ["SITE_BUCKET"],
+                Key="data/flatfox-listings.json",
+                Body=json.dumps(output, ensure_ascii=False),
+                ContentType="application/json",
+            )
+            cf = boto3.client("cloudfront")
+            cf.create_invalidation(
+                DistributionId=os.environ["DISTRIBUTION_ID"],
+                InvalidationBatch={
+                    "Paths": {"Quantity": 1, "Items": ["/data/flatfox-listings.json"]},
+                    "CallerReference": str(time.time()),
+                },
+            )
+            return {"status": "done", "count": len(listings)}
+        except Exception as e:
+            return {"status": "error", "error": str(e)}
+
+    try:
+        lambda_client = boto3.client("lambda")
+        lambda_client.invoke(
+            FunctionName=context.function_name,
+            InvocationType="Event",
+            Payload=json.dumps({"async_scrape": True}),
+        )
         return {
-            "statusCode": 200,
+            "statusCode": 202,
             "headers": {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",
             },
-            "body": json.dumps({"count": len(listings), "listings": listings}),
+            "body": json.dumps({"status": "started", "message": "Scrape triggered. Poll data/flatfox-listings.json for results."}),
         }
-
     except Exception as e:
         return {
-            "statusCode": 502,
+            "statusCode": 500,
             "headers": {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",

@@ -98,7 +98,7 @@ function setupControls() {
     status.textContent = "";
     status.className = "scrape-status";
     try {
-      await refreshFlatfoxFromAPI();
+      await refreshFlatfoxFromAPI((msg) => { status.textContent = msg; });
       renderFlatfoxListings();
       status.textContent = `${flatfoxListings.length} listings loaded`;
       status.classList.add("success");
