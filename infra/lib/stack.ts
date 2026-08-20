@@ -108,10 +108,7 @@ export class ZugsplorationStack extends cdk.Stack {
       new iam.PolicyStatement({
         actions: ["lambda:InvokeFunction"],
         resources: [
-          cdk.Arn.format(
-            { service: "lambda", resource: "function", resourceName: "*" },
-            this
-          ),
+          `arn:aws:lambda:${this.region}:${this.account}:function:${this.stackName}-*`,
         ],
       })
     );
