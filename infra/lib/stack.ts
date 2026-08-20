@@ -96,7 +96,7 @@ export class ZugsplorationStack extends cdk.Stack {
       runtime: lambda.Runtime.PYTHON_3_12,
       handler: "lambda_function.handler",
       code: lambda.Code.fromAsset(path.join(__dirname, "../lambda/flatfox")),
-      timeout: cdk.Duration.seconds(120),
+      timeout: cdk.Duration.seconds(300),
       memorySize: 256,
     });
 
