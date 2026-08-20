@@ -22,11 +22,15 @@ FLATFOX_PIN_URL = "https://flatfox.ch/api/v1/pin/"
 FLATFOX_DETAIL_URL = "https://flatfox.ch/api/v1/public-listing/"
 
 BBOX = {
-    "north": 47.30,
-    "south": 47.00,
-    "east": 8.70,
-    "west": 8.25,
+    "north": 47.45,
+    "south": 46.95,
+    "east": 8.80,
+    "west": 8.10,
 }
+
+TILE_LAT_STEP = 0.10
+TILE_LON_STEP = 0.15
+TILE_OVERLAP = 0.005
 
 BATCH_SIZE = 10
 BATCH_DELAY = 0.5
@@ -36,37 +40,90 @@ INITIAL_BACKOFF = 1.0
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
-def fetch_pins():
+def generate_tiles(bbox):
+    tiles = []
+    south = bbox["south"]
+    while south < bbox["north"]:
+        north = min(south + TILE_LAT_STEP, bbox["north"])
+        west = bbox["west"]
+        while west < bbox["east"]:
+            east = min(west + TILE_LON_STEP, bbox["east"])
+            tiles.append({
+                "north": north + TILE_OVERLAP,
+                "south": south - TILE_OVERLAP,
+                "east": east + TILE_OVERLAP,
+                "west": west - TILE_OVERLAP,
+            })
+            west += TILE_LON_STEP
+        south += TILE_LAT_STEP
+    return tiles
+
+
+def fetch_tile(tile):
     params = {
-        "north": BBOX["north"],
-        "south": BBOX["south"],
-        "east": BBOX["east"],
-        "west": BBOX["west"],
+        "north": tile["north"],
+        "south": tile["south"],
+        "east": tile["east"],
+        "west": tile["west"],
         "object_category": "APARTMENT",
         "offer_type": "RENT",
         "count": 500,
     }
 
     url = FLATFOX_PIN_URL + "?" + urllib.parse.urlencode(params)
-    print(f"Fetching pins from Flatfox...")
-    print(f"  URL: {url}")
-
     req = urllib.request.Request(url)
     req.add_header("User-Agent", "ZugCommutePlanner/1.0")
     req.add_header("Accept", "application/json")
 
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        print(f"  HTTP error: {e.code} {e.reason}")
-        sys.exit(1)
-    except urllib.error.URLError as e:
-        print(f"  Connection error: {e}")
-        sys.exit(1)
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
-    print(f"  Got {len(data)} pins")
-    return data
+
+def subdivide_tile(tile):
+    mid_lat = (tile["north"] + tile["south"]) / 2
+    mid_lon = (tile["east"] + tile["west"]) / 2
+    return [
+        {"south": tile["south"], "north": mid_lat + TILE_OVERLAP, "west": tile["west"], "east": mid_lon + TILE_OVERLAP},
+        {"south": tile["south"], "north": mid_lat + TILE_OVERLAP, "west": mid_lon - TILE_OVERLAP, "east": tile["east"]},
+        {"south": mid_lat - TILE_OVERLAP, "north": tile["north"], "west": tile["west"], "east": mid_lon + TILE_OVERLAP},
+        {"south": mid_lat - TILE_OVERLAP, "north": tile["north"], "west": mid_lon - TILE_OVERLAP, "east": tile["east"]},
+    ]
+
+
+def fetch_pins():
+    tiles = generate_tiles(BBOX)
+    print(f"Fetching pins from Flatfox across {len(tiles)} initial tiles...")
+
+    seen_pks = set()
+    all_pins = []
+    tile_num = 0
+
+    queue = list(tiles)
+    while queue:
+        tile = queue.pop(0)
+        tile_num += 1
+        try:
+            pins = fetch_tile(tile)
+            new_pins = [p for p in pins if p.get("pk") not in seen_pks]
+            for p in new_pins:
+                seen_pks.add(p["pk"])
+            all_pins.extend(new_pins)
+
+            if len(pins) >= 200:
+                subtiles = subdivide_tile(tile)
+                queue = subtiles + queue
+                print(f"  Tile {tile_num}: {len(pins)} pins, {len(new_pins)} new [AT CAP - subdividing into 4]")
+            else:
+                print(f"  Tile {tile_num}: {len(pins)} pins, {len(new_pins)} new")
+
+            time.sleep(0.3)
+        except urllib.error.HTTPError as e:
+            print(f"  Tile {tile_num}: HTTP error {e.code} {e.reason}")
+        except urllib.error.URLError as e:
+            print(f"  Tile {tile_num}: Connection error: {e}")
+
+    print(f"  Total unique pins: {len(all_pins)}")
+    return all_pins
 
 
 def fetch_detail(pk):

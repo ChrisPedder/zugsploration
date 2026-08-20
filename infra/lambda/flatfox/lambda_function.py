@@ -6,7 +6,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 FLATFOX_PIN_URL = "https://flatfox.ch/api/v1/pin/"
 FLATFOX_DETAIL_URL = "https://flatfox.ch/api/v1/public-listing/"
-BBOX = {"north": 47.30, "south": 47.00, "east": 8.70, "west": 8.25}
+BBOX = {"north": 47.45, "south": 46.95, "east": 8.80, "west": 8.10}
+
+TILE_LAT_STEP = 0.10
+TILE_LON_STEP = 0.15
+TILE_OVERLAP = 0.005
 
 BATCH_SIZE = 10
 BATCH_DELAY = 0.5
@@ -56,36 +60,89 @@ def fetch_details_batched(pks):
     return results
 
 
-def handler(event, context):
+def generate_tiles(bbox):
+    tiles = []
+    south = bbox["south"]
+    while south < bbox["north"]:
+        north = min(south + TILE_LAT_STEP, bbox["north"])
+        west = bbox["west"]
+        while west < bbox["east"]:
+            east = min(west + TILE_LON_STEP, bbox["east"])
+            tiles.append({
+                "north": north + TILE_OVERLAP,
+                "south": south - TILE_OVERLAP,
+                "east": east + TILE_OVERLAP,
+                "west": west - TILE_OVERLAP,
+            })
+            west += TILE_LON_STEP
+        south += TILE_LAT_STEP
+    return tiles
+
+
+def fetch_tile(tile):
     params = {
-        "north": BBOX["north"],
-        "south": BBOX["south"],
-        "east": BBOX["east"],
-        "west": BBOX["west"],
+        "north": tile["north"],
+        "south": tile["south"],
+        "east": tile["east"],
+        "west": tile["west"],
         "object_category": "APARTMENT",
         "offer_type": "RENT",
         "count": 500,
     }
-
     url = FLATFOX_PIN_URL + "?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url)
+    req.add_header("User-Agent", "ZugCommutePlanner/1.0")
+    req.add_header("Accept", "application/json")
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
-    try:
-        req = urllib.request.Request(url)
-        req.add_header("User-Agent", "ZugCommutePlanner/1.0")
-        req.add_header("Accept", "application/json")
 
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            raw = json.loads(resp.read().decode("utf-8"))
+def subdivide_tile(tile):
+    mid_lat = (tile["north"] + tile["south"]) / 2
+    mid_lon = (tile["east"] + tile["west"]) / 2
+    return [
+        {"south": tile["south"], "north": mid_lat + TILE_OVERLAP, "west": tile["west"], "east": mid_lon + TILE_OVERLAP},
+        {"south": tile["south"], "north": mid_lat + TILE_OVERLAP, "west": mid_lon - TILE_OVERLAP, "east": tile["east"]},
+        {"south": mid_lat - TILE_OVERLAP, "north": tile["north"], "west": tile["west"], "east": mid_lon + TILE_OVERLAP},
+        {"south": mid_lat - TILE_OVERLAP, "north": tile["north"], "west": mid_lon - TILE_OVERLAP, "east": tile["east"]},
+    ]
 
-        pins = []
-        for pin in raw:
-            lat = pin.get("latitude")
-            lon = pin.get("longitude")
-            pk = pin.get("pk")
-            price = pin.get("price_display")
-            if lat is None or lon is None or pk is None:
+
+def fetch_all_pins():
+    tiles = generate_tiles(BBOX)
+    seen_pks = set()
+    all_pins = []
+    queue = list(tiles)
+    while queue:
+        tile = queue.pop(0)
+        try:
+            raw = fetch_tile(tile)
+            if len(raw) >= 200:
+                queue = subdivide_tile(tile) + queue
                 continue
-            pins.append({"pk": pk, "lat": lat, "lon": lon, "price": price, "price_unit": pin.get("price_unit", "")})
+            for pin in raw:
+                pk = pin.get("pk")
+                if pk is None or pk in seen_pks:
+                    continue
+                lat = pin.get("latitude")
+                lon = pin.get("longitude")
+                if lat is None or lon is None:
+                    continue
+                seen_pks.add(pk)
+                all_pins.append({
+                    "pk": pk, "lat": lat, "lon": lon,
+                    "price": pin.get("price_display"),
+                    "price_unit": pin.get("price_unit", ""),
+                })
+            time.sleep(0.3)
+        except Exception:
+            continue
+    return all_pins
+
+
+def handler(event, context):
+    try:
+        pins = fetch_all_pins()
 
         details = fetch_details_batched([p["pk"] for p in pins])
 
