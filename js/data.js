@@ -73,7 +73,10 @@ async function refreshFlatfoxFromAPI(onStatus) {
   const previousTimestamp = currentData.fetchedAt;
 
   const resp = await fetch("/api/flatfox");
-  if (!resp.ok) throw new Error(`Flatfox API returned ${resp.status}`);
+  if (!resp.ok) {
+    const body = await resp.text();
+    throw new Error(`API ${resp.status}: ${body}`);
+  }
 
   if (onStatus) onStatus("Scraping in progress...");
 
