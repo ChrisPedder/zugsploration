@@ -236,11 +236,12 @@ def handler(event, context):
             "body": json.dumps({"status": "started", "message": "Scrape triggered. Poll data/flatfox-listings.json for results."}),
         }
     except Exception as e:
+        import traceback
         return {
             "statusCode": 500,
             "headers": {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",
             },
-            "body": json.dumps({"error": str(e)}),
+            "body": json.dumps({"error": str(e), "trace": traceback.format_exc()}),
         }
