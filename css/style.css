@@ -132,6 +132,31 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* --- Radio filter group --- */
+.radio-group {
+  margin-bottom: 10px;
+}
+
+.radio-group > label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.radio-options {
+  display: flex;
+  gap: 12px;
+}
+
+.radio-options label {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.radio-options input[type="radio"] {
+  accent-color: #2563eb;
+}
+
 /* --- Legend --- */
 .legend {
   position: absolute;

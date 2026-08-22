@@ -31,11 +31,13 @@ def fetch_detail(pk):
             req.add_header("Accept", "application/json")
             with urllib.request.urlopen(req, timeout=10) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
+            attrs = {a.get("name") for a in data.get("attributes", [])}
             return {
                 "rooms": data.get("number_of_rooms"),
                 "surface": data.get("surface_living"),
                 "address": data.get("street"),
                 "city": data.get("city"),
+                "pets_allowed": "petsallowed" in attrs,
             }
         except urllib.error.HTTPError as e:
             if e.code == 429 or e.code >= 500:
@@ -182,6 +184,7 @@ def do_scrape():
                 listing["address"] = detail["address"]
             if detail.get("city"):
                 listing["city"] = detail["city"]
+            listing["pets_allowed"] = detail.get("pets_allowed", False)
 
         listings.append(listing)
 

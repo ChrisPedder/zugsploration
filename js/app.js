@@ -57,6 +57,11 @@ function setupControls() {
     refreshFlatfoxListings();
   });
 
+  // Pets filter
+  document.querySelectorAll('input[name="petsFilter"]').forEach(radio => {
+    radio.addEventListener("change", () => refreshFlatfoxListings());
+  });
+
   // Route profile selector
   document.getElementById("route-profile").addEventListener("change", (e) => {
     currentProfile = e.target.value;

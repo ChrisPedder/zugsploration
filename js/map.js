@@ -463,6 +463,8 @@ function renderFlatfoxListings() {
 
   const maxPrice = getFilterValue("maxListingPrice");
   const minRooms = getFilterFloat("minRooms");
+  const petsFilter = document.querySelector('input[name="petsFilter"]:checked');
+  const requirePets = petsFilter && petsFilter.value === "yes";
   const group = L.layerGroup();
   let shown = 0;
 
@@ -470,6 +472,7 @@ function renderFlatfoxListings() {
     if (listing.price === null) continue;
     if (listing.price > maxPrice) continue;
     if (minRooms > 1 && (listing.rooms == null || listing.rooms < minRooms)) continue;
+    if (requirePets && !listing.pets_allowed) continue;
 
     const colour = getRentColour(listing.price);
 
@@ -518,6 +521,7 @@ function buildListingPopup(listing) {
     const addr = [listing.address, listing.city].filter(Boolean).join(", ");
     html += `<dt>Address</dt><dd>${addr}</dd>`;
   }
+  html += `<dt>Pets allowed</dt><dd>${listing.pets_allowed ? "Yes" : "No"}</dd>`;
 
   const municipality = findNearestMunicipality(listing.lat, listing.lon);
   const dist = estimateCyclingDistance(listing.lat, listing.lon);
